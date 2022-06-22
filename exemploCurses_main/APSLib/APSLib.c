@@ -2,27 +2,24 @@
 #include<curses.h>
 #include "APSLib.h"
 
-void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY){
+void LeMundo(char* nomeArquivo, char mapa[100][100]){
 
     FILE* arquivo = fopen("Salas\\sala1.txt", "r");
 
-    char mapa[100][100] = {0}; //LINHA X COLUNA
-
-    ///COPIA O MAPA DO ARQUIVO NO VETOR
-    for(int lin = 0; fgets(mapa[lin], 100, arquivo); lin++){ //fgets vai retornar null no final do arquivo
-
-        for(int col = 0; col < 50; col++){ //COLUNA
-            if(mapa[lin][col] == 'x'){
-                //setColor(COLOR_BLACK, COLOR_WHITE, A_BOLD);
-                //mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
-            }
-            if(mapa[lin][col] == '@'){
-                //setColor(COLOR_GREEN, COLOR_BLACK, 0);
-                //mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
-            }
+    ///INICIALIZA O VETOR
+    for(int i = 0; i < 100; i++){
+       for(int j = 0; j < 100; j++){
+            mapa[i][j] = ' ';
         }
     }
+
+    ///COPIA O MAPA DO ARQUIVO NO VETOR
+    for(int lin = 0; fgets(mapa[lin], 100, arquivo); lin++){}; //fgets vai retornar null no final do arquivo
+
     fclose(arquivo);
+}
+
+void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY, char mapa[100][100]){
 
     ///VERIFICA EM QUE QUARTO O JOGADOR ESTA
     enum quartos{
@@ -106,6 +103,7 @@ void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], in
                 setColor(COLOR_WHITE, COLOR_BLACK, A_DIM);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
             }
+
             if(mapa[lin][col] == '1'){ //PREFEITO
                 setColor(COLOR_GREEN, COLOR_BLACK, 0);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
@@ -130,26 +128,13 @@ void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], in
     }
 }
 
-void DetectaColisoes(int colisoes [100][100]){
+void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int* colidindo){
 
-    FILE* arquivo = fopen("Salas\\sala1.txt", "r");
-
-    //fgets vai retornar null no final do arquivo
-    char teste[100];
-    int lin = 0;
-
-    while(fgets(teste, 100, arquivo)){
-
-        for(int col = 0; col < 50; col++){ //COLUNA
-            if(teste[col] != ' '){
-                colisoes[lin][col] = 1;
-            }
-        }
-
-        lin++;
+    if(mapa[posJogadorY][posJogadorX] != ' '){
+        *colidindo = 1;
+    }else{
+        *colidindo = 0;
     }
-
-    fclose(arquivo);
 }
 
 int DetectaInteracoes(int x, int y){

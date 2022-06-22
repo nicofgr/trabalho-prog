@@ -10,6 +10,7 @@
 // Estrutura com estado interno da aplicação
 typedef struct gameData
 {
+    bool devMode;
     int ultimaTecla;
     int colisao;
     int interacao;
@@ -23,6 +24,7 @@ typedef struct gameData
     struct pos posMapaAnterior;
     struct pos meioTela;
 
+    char mapa[100][100];
 
 } gameData;
 
@@ -83,8 +85,8 @@ void initGame(gameData * game)
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
-    game->posMapa.x = (game->meioTela.x) - 12;
-    game->posMapa.y = (game->meioTela.y) - 1;
+    game->posMapa.x = (game->meioTela.x) - 4;
+    game->posMapa.y = (game->meioTela.y) + 1;
 
     game->posMapaAnterior.x = game->posMapa.x;
     game->posMapaAnterior.y = game->posMapa.y;
@@ -94,6 +96,9 @@ void initGame(gameData * game)
     game->colisao = 0;
     game->interacao = 0;
     game->interagir = 0;
+
+    game->devMode = FALSE;
+    LeMundo("Salas\\sala1.txt", game->mapa);
 }
 
 // Gerencia entradas do usuário e controla o estado interno em game
@@ -106,19 +111,22 @@ void handleInputs(gameData * game)
     if(entrada != -1)
         game->ultimaTecla = entrada;
 
-
     switch(entrada)
     {
         case 'w': //CIMA
+            game->posMapaAnterior = game->posMapa;
             game->posMapa.y += 1;
             break;
         case 'a': //ESQUERDA
+            game->posMapaAnterior = game->posMapa;
             game->posMapa.x += 1;
             break;
         case 's': //BAIXO
+            game->posMapaAnterior = game->posMapa;
             game->posMapa.y -= 1;
             break;
         case 'd': //DIREITA
+            game->posMapaAnterior = game->posMapa;
             game->posMapa.x -= 1;
             break;
         case 'e':
@@ -131,6 +139,9 @@ void handleInputs(gameData * game)
             curs_set(1);
             endwin();
             exit(EXIT_SUCCESS);
+            break;
+        case KEY_F(1):
+            game->devMode -= 1;
             break;
         case KEY_RESIZE:
             // Finaliza a tela atual e cria uma nova
@@ -154,18 +165,12 @@ void handleInputs(gameData * game)
 
 void doUpdate(gameData * game)
 {
-
-
-    int colisoes[100][100];
-
     game->interacao = DetectaInteracoes(game->meioTela.x - game->posMapa.x, game->meioTela.y - game->posMapa.y);
 
-    DetectaColisoes(colisoes);
+    game->posJogador.x = game->meioTela.x - game->posMapa.x;
+    game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
-    if(colisoes[game->meioTela.y - game->posMapa.y][game->meioTela.x - game->posMapa.x] == 1)
-        game->colisao = 1;
-    else
-        game->colisao = 0;
+    DetectaColisoes(game->mapa, game->posJogador.x, game->posJogador.y, &game->colisao);
 
     if(game->colisao == 1){
         game->posMapa.x = game->posMapaAnterior.x;
@@ -174,34 +179,30 @@ void doUpdate(gameData * game)
 
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
-
-    game->posMapaAnterior.x = game->posMapa.x;
-    game->posMapaAnterior.y = game->posMapa.y;
 }
 
 void drawScreen(gameData * game){
 
     clear();
 
-    setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
-    printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
-    printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
-    printw("Meio da tela: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
-    printw("Centro do terminal: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
-    if(game->ultimaTecla != -1)
+        setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
+    if(game->devMode){
+
+        printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
+        printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
+        printw("Posicao tela anterior: (%d, %d)\n", game->posMapaAnterior.x, game->posMapaAnterior.y);
+        printw("Centro do terminal: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
+        printw("Colisao: %d\n", game->colisao);
         printw("Ultima tecla: %c\n", game->ultimaTecla);
-    if(game->colisao == 1){
-        setColor(COLOR_WHITE, COLOR_RED, A_BOLD);
-        printw("COLISAO\n");
-    }
+    }else
+        printw("Pressione F1 para mostrar informacoes do jogo.");
 
     //DESENHA JOGADOR
     setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
     mvaddch(game->meioTela.y, game->meioTela.x, ACS_DIAMOND);
 
-    //DESENHA SALA
-    DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y);
-
+    //DESENHA MUNDO
+    DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y, game->mapa);
     //INTERACAO
     if(game->interagir && game->interacao){
         Dialogo(game->ultimaTecla, &game->interagir);
