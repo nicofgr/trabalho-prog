@@ -183,43 +183,42 @@ void drawScreen(gameData * game){
 
     clear();
 
+    setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
+    printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
+    printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
+    printw("Meio da tela: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
+    printw("Centro do terminal: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
+    if(game->ultimaTecla != -1)
+        printw("Ultima tecla: %c\n", game->ultimaTecla);
+    if(game->colisao == 1){
+        setColor(COLOR_WHITE, COLOR_RED, A_BOLD);
+        printw("COLISAO\n");
+    }
+
     //DESENHA JOGADOR
     setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
     mvaddch(game->meioTela.y, game->meioTela.x, ACS_DIAMOND);
 
     //DESENHA SALA
-    DesenhaSala(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y);
+    DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y);
 
-    if(game->interacao)
-        printw("Interacao disponivel, pressione 'e' para interagir");
-
+    //INTERACAO
     if(game->interagir && game->interacao){
         Dialogo(game->ultimaTecla, &game->interagir);
     }else{
         game->interagir = 0;
     }
 
-    setColor(COLOR_WHITE, COLOR_BLACK, 0);
-    printw("\n");
-    printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
-    printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
-    printw("Meio da tela: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
-    printw("Centro do terminal: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
-    if(game->colisao == 1){
-        setColor(COLOR_WHITE, COLOR_RED, A_BOLD);
-        printw("COLISAO\n");
-    }
+    setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
+    if(game->interacao && !(game->interagir))
+        printw("\n\nInteracao disponivel, pressione 'e' para interagir");
+
 
     /*
     // Exemplos de print na tela
     setColor(COLOR_BLACK, COLOR_WHITE, A_BOLD);
     printw("\nEngenharia de Computacao!\n");
     */
-
-    if(game->ultimaTecla != -1)
-        printw("Ultima tecla: %c", game->ultimaTecla);
-
-
     // Exibe o conteúdo na tela (stdscr), getch() também ativa um refresh
     refresh();
 }
