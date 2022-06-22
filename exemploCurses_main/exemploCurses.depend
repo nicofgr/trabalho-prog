@@ -1,0 +1,913 @@
+# depslib dependency file v1.0
+1650994221 source:c:\users\aluno\desktop\exemplocurses\main.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\common\pdcurses.rc
+	<windows.h>
+	"../curses.h"
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\firework.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\ozdemo.c
+	<signal.h>
+	<string.h>
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\ptest.c
+	<curses.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\rain.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\testcurs.c
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<curses.h>
+	<locale.h>
+	<wchar.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\tui.c
+	<ctype.h>
+	<curses.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"tui.h"
+	<unistd.h>
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\demos\tui.h
+	<curses.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\tuidemo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"tui.h"
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\worm.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\demos\xmas.c
+	<curses.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\dos\pdcclip.c
+	"pdcdos.h"
+	<stdlib.h>
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\dos\pdcdos.h
+	<curspriv.h>
+	<string.h>
+	<dos.h>
+	<sys/movedata.h>
+	<dpmi.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\addch.c
+	<curspriv.h>
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\curspriv.h
+	<curses.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\addchstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\addstr.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\attr.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\beep.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\bkgd.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\border.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\clear.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\color.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\debug.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<time.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\delch.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\deleteln.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\getch.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\getstr.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\getyx.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\inch.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\inchstr.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\initscr.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\inopts.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\insch.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\insstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\instr.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\kernel.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\keyname.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\mouse.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\move.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\outopts.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\overlay.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\pad.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\panel.c
+	<curspriv.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\panel.h
+	<curses.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\printw.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\refresh.c
+	<curspriv.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\scanw.c
+	<curspriv.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\scr_dump.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\scroll.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\slk.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\termattr.c
+	<curspriv.h>
+	<string.h>
+	<limits.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\touch.c
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\util.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\pdcurses\window.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcclip.c
+	"pdcwin.h"
+	<string.h>
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcwin.h
+	<windows.h>
+	<curspriv.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcdisp.c
+	"pdcwin.h"
+	<stdlib.h>
+	<string.h>
+	"../common/acsuni.h"
+	"../common/acs437.h"
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\common\acsuni.h
+
+1642209065 c:\users\aluno\desktop\exemplocurses\pdcurses\common\acs437.h
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcgetsc.c
+	"pdcwin.h"
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdckbd.c
+	"pdcwin.h"
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcscrn.c
+	"pdcwin.h"
+	<stdlib.h>
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcsetsc.c
+	"pdcwin.h"
+
+1642209065 source:c:\users\aluno\desktop\exemplocurses\pdcurses\wincon\pdcutil.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\common\pdcurses.rc
+	<windows.h>
+	"../curses.h"
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\addch.c
+	<curspriv.h>
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\curspriv.h
+	<curses.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\addchstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\addstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\attr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\beep.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\bkgd.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\border.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\clear.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\color.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\debug.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<time.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\delch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\deleteln.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\getch.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\getstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\getyx.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\inch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\inchstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\initscr.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\inopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\insch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\insstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\instr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\kernel.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\keyname.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\mouse.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\move.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\outopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\overlay.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\pad.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\panel.c
+	<curspriv.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\panel.h
+	<curses.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\printw.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\refresh.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\scanw.c
+	<curspriv.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\scr_dump.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\scroll.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\slk.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\termattr.c
+	<curspriv.h>
+	<string.h>
+	<limits.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\touch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\util.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\pdcurses\window.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcclip.c
+	"pdcwin.h"
+	<string.h>
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcwin.h
+	<windows.h>
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcdisp.c
+	"pdcwin.h"
+	<stdlib.h>
+	<string.h>
+	"../common/acsuni.h"
+	"../common/acs437.h"
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\common\acsuni.h
+
+1642209066 c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\common\acs437.h
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcgetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdckbd.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcscrn.c
+	"pdcwin.h"
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcsetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\pdcurses\wincon\pdcutil.c
+	"pdcwin.h"
+
+1653070751 source:c:\users\daniel\documents\dropbox\ongoing research\exemplocurses\main.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1653446862 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\main.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\common\pdcurses.rc
+	<windows.h>
+	"../curses.h"
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\addch.c
+	<curspriv.h>
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\curspriv.h
+	<curses.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\addchstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\addstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\attr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\beep.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\bkgd.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\border.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\clear.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\color.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\debug.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<time.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\delch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\deleteln.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\getch.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\getstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\getyx.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\inch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\inchstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\initscr.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\inopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\insch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\insstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\instr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\kernel.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\keyname.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\mouse.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\move.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\outopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\overlay.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\pad.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\panel.c
+	<curspriv.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\panel.h
+	<curses.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\printw.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\refresh.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\scanw.c
+	<curspriv.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\scr_dump.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\scroll.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\slk.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\termattr.c
+	<curspriv.h>
+	<string.h>
+	<limits.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\touch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\util.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\pdcurses\window.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcclip.c
+	"pdcwin.h"
+	<string.h>
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcwin.h
+	<windows.h>
+	<curspriv.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcdisp.c
+	"pdcwin.h"
+	<stdlib.h>
+	<string.h>
+	"../common/acsuni.h"
+	"../common/acs437.h"
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\common\acsuni.h
+
+1642209066 c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\common\acs437.h
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcgetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdckbd.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcscrn.c
+	"pdcwin.h"
+	<stdlib.h>
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcsetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\daniel\downloads\exemplocursesbasico\exemplocurses\pdcurses\wincon\pdcutil.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\common\pdcurses.rc
+	<windows.h>
+	"../curses.h"
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\addch.c
+	<curspriv.h>
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\curspriv.h
+	<curses.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\addchstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\addstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\attr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\beep.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\bkgd.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\border.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\clear.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\color.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\debug.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<time.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\delch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\deleteln.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\getch.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\getstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\getyx.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\inch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\inchstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\initscr.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\inopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\insch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\insstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\instr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\kernel.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\keyname.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\mouse.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\move.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\outopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\overlay.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\pad.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\panel.c
+	<curspriv.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\panel.h
+	<curses.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\printw.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\refresh.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\scanw.c
+	<curspriv.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\scr_dump.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\scroll.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\slk.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\termattr.c
+	<curspriv.h>
+	<string.h>
+	<limits.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\touch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\util.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\pdcurses\window.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcclip.c
+	"pdcwin.h"
+	<string.h>
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcwin.h
+	<windows.h>
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcdisp.c
+	"pdcwin.h"
+	<stdlib.h>
+	<string.h>
+	"../common/acsuni.h"
+	"../common/acs437.h"
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\common\acsuni.h
+
+1642209066 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\common\acs437.h
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcgetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdckbd.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcscrn.c
+	"pdcwin.h"
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcsetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\pdcurses\wincon\pdcutil.c
+	"pdcwin.h"
+
+1655871167 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\main.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1655872162 source:c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\apslib\apslib.c
+	<stdio.h>
+	<curses.h>
+	"APSLib.h"
+
+1655870180 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\apslib\apslib.h
+
