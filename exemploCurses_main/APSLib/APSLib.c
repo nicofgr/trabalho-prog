@@ -165,6 +165,54 @@ int DetectaInteracoes(int x, int y){
         return 0;
 }
 
+void MenuInicial(gameData * game){
+
+    clear();
+
+    ///TITULO GRANDE
+    setColor(COLOR_GREEN, COLOR_BLACK, 0);
+    printw("\n\n\n\n\n\n\n\n\n");
+    printw("                                  _____ _ _         _          ___              _          \n");
+    printw("                                 |_   _(_) |       | |        / _ \\            (_)        \n");
+    printw("                                   | |  _| |_ _   _| | ___   / /_\\ \\ __ _ _   _ _        \n");
+    printw("                                   | | | | __| | | | |/ _ \\  |  _  |/ _` | | | | |        \n");
+    printw("                                   | | | | |_| |_| | | (_) | | | | | (_| | |_| | |         \n");
+    printw("                                   \\_/ |_|\\__|\\__,_|_|\\___/  \\_| |_/\\__, |\\__,_|_|  \n");
+    printw("                                                                       | |                 \n");
+    printw("                                                                       |_|                 \n");
+
+    switch(game->telaMenuInicial){
+        case 0:
+            ///OPCOES
+            printw("                                             Pressione ENTER para continuar.");
+
+            break;
+        case 1:
+            initScreen(0);
+            printw("\n                                      Digite o nome do seu personagem: ");
+            getstr(game->nomePersonagem);
+            game->menuInicial = FALSE;
+            initScreen(1);
+            break;
+
+    }
+
+    ///BORDAS
+            for(int lin = 0; lin < (game->meioTela.y*2); lin++){
+                for(int col = 0; col < (game->meioTela.x*2); col++){
+                    if(lin == 0 || col == 0 || lin == (game->meioTela.y*2)-1 || col == (game->meioTela.x*2)-1){
+                        setColor(COLOR_BLACK, COLOR_GREEN, 0);
+                        mvaddch(lin, col, ACS_BOARD);
+                    }
+                }
+            }
+
+    ///Meio da tela
+    //mvaddch(game->meioTela.y, game->meioTela.x, 'x');
+
+    refresh();
+}
+
 void Dialogo(int a, int *interagir){
 
     setColor(COLOR_GREEN, COLOR_BLACK, A_BOLD);

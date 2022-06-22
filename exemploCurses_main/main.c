@@ -10,6 +10,12 @@
 // Estrutura com estado interno da aplicação
 typedef struct gameData
 {
+    ///MENU INICIAL
+    bool menuInicial;
+    int telaMenuInicial;
+
+    ///JOGO
+    char nomePersonagem[50];
     bool devMode;
     int ultimaTecla;
     int colisao;
@@ -31,7 +37,7 @@ typedef struct gameData
 //////////////////////////////////////////////////////////////////////
 // Funções auxiliares para a biblioteca Curses
 //////////////////////////////////////////////////////////////////////
-void initScreen()
+void initScreen(int modo)
 {
 #ifdef XCURSES
     Xinitscr(argc, argv);
@@ -50,16 +56,24 @@ void initScreen()
                 init_pair(bg*PALLETE_SIZE + fg + 1, fg, bg); // color 0 is system default (reserved)
     }
 
-    // Trata a tecla Enter como \n
-    //nl();
-    // Teclas digitadas pelo usuário não aparecem na tela
-    noecho();
-    // 0 para cursor invisível
-    curs_set(0);
-    // Define getch como non-blocking de acordo com o timeout abaixo
-    nodelay(stdscr, TRUE);
-    // Timeout em 0 determina getch como non-blocking, não espera entrada do usuário
-    timeout(0);
+    if(modo){
+        // Trata a tecla Enter como \n
+        //nl();
+        // Teclas digitadas pelo usuário não aparecem na tela
+        noecho();
+        // 0 para cursor invisível
+        curs_set(0);
+        // Define getch como non-blocking de acordo com o timeout abaixo
+        nodelay(stdscr, TRUE);
+        // Timeout em 0 determina getch como non-blocking, não espera entrada do usuário
+        timeout(0);
+
+    }else{
+        echo();
+        curs_set(1);
+        nodelay(stdscr, FALSE);
+        timeout(0);
+    }
     // Habilita teclas de function (F1, F2, ...), flechas, etc
     keypad(stdscr, TRUE);
 }
@@ -97,6 +111,8 @@ void initGame(gameData * game)
     game->interacao = 0;
     game->interagir = 0;
 
+    game->menuInicial = TRUE;
+    game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game->mapa);
 }
@@ -143,6 +159,10 @@ void handleInputs(gameData * game)
         case KEY_F(1):
             game->devMode -= 1;
             break;
+        case '\n':
+            if(game->menuInicial)
+                game->telaMenuInicial = 1;
+            break;
         case KEY_RESIZE:
             // Finaliza a tela atual e cria uma nova
             getmaxyx(stdscr, my, mx);
@@ -156,7 +176,7 @@ void handleInputs(gameData * game)
             game->posMapaAnterior.y = game->posMapa.y;
 
             endwin();
-            initScreen();
+            initScreen(1);
             clear();
             refresh();
             break;
@@ -188,6 +208,7 @@ void drawScreen(gameData * game){
         setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
     if(game->devMode){
 
+        printw("Nome do personagem: %s\n", game->nomePersonagem);
         printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
         printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
         printw("Posicao tela anterior: (%d, %d)\n", game->posMapaAnterior.x, game->posMapaAnterior.y);
@@ -230,7 +251,7 @@ int main(int argc, char *argv[])
     gameData game;
 
     // inicializa a tela pelo Curses e o estado inicial da aplicação
-    initScreen();
+    initScreen(1);
     initGame(&game);
 
     // Laço principal sem retorno, pode ser removido para exibição direta de informação na tela
@@ -243,7 +264,10 @@ int main(int argc, char *argv[])
         doUpdate(&game);
 
         // Atualiza a tela
-        drawScreen(&game);
+        if(game.menuInicial)
+            MenuInicial(&game);
+        else
+            drawScreen(&game);
 
         // Controla o FPS da aplicação
         napms(10);

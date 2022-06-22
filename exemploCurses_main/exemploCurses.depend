@@ -911,7 +911,7 @@
 
 1655870180 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\apslib\apslib.h
 
-1655932920 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.c
+1655939017 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.c
 	<stdio.h>
 	<curses.h>
 	"APSLib.h"
@@ -923,9 +923,9 @@
 	<wchar.h>
 	<stdbool.h>
 
-1655931440 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
+1655938729 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
 
-1655933020 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\main.c
+1655939051 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\main.c
 	<curses.h>
 	<stdlib.h>
 	<time.h>
