@@ -18,9 +18,11 @@ typedef struct gameData
     struct pos{
         int x;
         int y;
-    } posAtual;
+    } posJogador;
+    struct pos posMapa;
+    struct pos posMapaAnterior;
+    struct pos meioTela;
 
-    struct pos posAnterior;
 
 } gameData;
 
@@ -73,11 +75,22 @@ void setColor(short int fg, short int bg, chtype attr)
 //////////////////////////////////////////////////////////////////////
 void initGame(gameData * game)
 {
+    int mx, my;
+    getmaxyx(stdscr, my, mx);
+    game->meioTela.x = mx/2;
+    game->meioTela.y = my/2;
+
+    game->posJogador.x = game->meioTela.x - game->posMapa.x;
+    game->posJogador.y = game->meioTela.y - game->posMapa.y;
+
+    game->posMapa.x = (game->meioTela.x) - 12;
+    game->posMapa.y = (game->meioTela.y) - 1;
+
+    game->posMapaAnterior.x = game->posMapa.x;
+    game->posMapaAnterior.y = game->posMapa.y;
+
     game->ultimaTecla = -1;
-    game->posAtual.x = 5;
-    game->posAtual.y = 5;
-    game->posAnterior.x = 5;
-    game->posAnterior.y = 5;
+
     game->colisao = 0;
     game->interacao = 0;
     game->interagir = 0;
@@ -88,6 +101,7 @@ void initGame(gameData * game)
 void handleInputs(gameData * game)
 {
     int entrada = getch();
+    int mx, my;
 
     if(entrada != -1)
         game->ultimaTecla = entrada;
@@ -96,20 +110,16 @@ void handleInputs(gameData * game)
     switch(entrada)
     {
         case 'w': //CIMA
-            game->posAnterior = game->posAtual;
-            game->posAtual.y -= 1;
+            game->posMapa.y += 1;
             break;
         case 'a': //ESQUERDA
-            game->posAnterior = game->posAtual;
-            game->posAtual.x -= 1;
+            game->posMapa.x += 1;
             break;
         case 's': //BAIXO
-            game->posAnterior = game->posAtual;
-            game->posAtual.y += 1;
+            game->posMapa.y -= 1;
             break;
         case 'd': //DIREITA
-            game->posAnterior = game->posAtual;
-            game->posAtual.x += 1;
+            game->posMapa.x -= 1;
             break;
         case 'e':
             if(game->interacao)
@@ -124,6 +134,16 @@ void handleInputs(gameData * game)
             break;
         case KEY_RESIZE:
             // Finaliza a tela atual e cria uma nova
+            getmaxyx(stdscr, my, mx);
+            game->meioTela.x = mx/2;
+            game->meioTela.y = my/2;
+            game->posJogador.x = game->meioTela.x - game->posMapa.x;
+            game->posJogador.y = game->meioTela.y - game->posMapa.y;
+            game->posMapa.x = (game->posJogador.x) - 12;
+            game->posMapa.y = (game->posJogador.y) - 1;
+            game->posMapaAnterior.x = game->posMapa.x;
+            game->posMapaAnterior.y = game->posMapa.y;
+
             endwin();
             initScreen();
             clear();
@@ -134,49 +154,61 @@ void handleInputs(gameData * game)
 
 void doUpdate(gameData * game)
 {
+
+
     int colisoes[100][100];
 
-    game->interacao = DetectaInteracoes(game->posAtual.x, game->posAtual.y);
+    game->interacao = DetectaInteracoes(game->meioTela.x - game->posMapa.x, game->meioTela.y - game->posMapa.y);
 
     DetectaColisoes(colisoes);
 
-    if(colisoes[game->posAtual.y][game->posAtual.x] == 1)
+    if(colisoes[game->meioTela.y - game->posMapa.y][game->meioTela.x - game->posMapa.x] == 1)
         game->colisao = 1;
     else
         game->colisao = 0;
 
-    if(game->colisao == 1)
-        game->posAtual = game->posAnterior;
+    if(game->colisao == 1){
+        game->posMapa.x = game->posMapaAnterior.x;
+        game->posMapa.y = game->posMapaAnterior.y;
+    }
 
+    game->posJogador.x = game->meioTela.x - game->posMapa.x;
+    game->posJogador.y = game->meioTela.y - game->posMapa.y;
+
+    game->posMapaAnterior.x = game->posMapa.x;
+    game->posMapaAnterior.y = game->posMapa.y;
 }
 
-void drawScreen(gameData * game)
-{
+void drawScreen(gameData * game){
 
     clear();
 
     //DESENHA JOGADOR
-    setColor(COLOR_WHITE, COLOR_BLACK, 0);
-    mvaddch(game->posAtual.y, game->posAtual.x, ACS_DIAMOND);
+    setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
+    mvaddch(game->meioTela.y, game->meioTela.x, ACS_DIAMOND);
 
-    DesenhaSala();
-
-    if(game->colisao == 1){
-        setColor(COLOR_WHITE, COLOR_RED, A_BOLD);
-        printw("COLISAO");
-    }
+    //DESENHA SALA
+    DesenhaSala(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y);
 
     if(game->interacao)
         printw("Interacao disponivel, pressione 'e' para interagir");
 
     if(game->interagir && game->interacao){
         Dialogo(game->ultimaTecla, &game->interagir);
+    }else{
+        game->interagir = 0;
     }
 
     setColor(COLOR_WHITE, COLOR_BLACK, 0);
-    printw("\n\n\n\n\n\n\n\n\n\n");
-    printw("Posicao: x:%d y:%d\n", game->posAtual.x, game->posAtual.y);
-    printw("PosicaoAnterior: x:%d y:%d\n", game->posAnterior.x, game->posAnterior.y);
+    printw("\n");
+    printw("Posicao jogador: (%d, %d)\n", game->posJogador.x, game->posJogador.y);
+    printw("Posicao tela: (%d, %d)\n", game->posMapa.x, game->posMapa.y);
+    printw("Meio da tela: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
+    printw("Centro do terminal: (%d, %d)\n", game->meioTela.x, game->meioTela.y);
+    if(game->colisao == 1){
+        setColor(COLOR_WHITE, COLOR_RED, A_BOLD);
+        printw("COLISAO\n");
+    }
 
     /*
     // Exemplos de print na tela

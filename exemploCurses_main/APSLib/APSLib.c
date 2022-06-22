@@ -2,28 +2,67 @@
 #include<curses.h>
 #include "APSLib.h"
 
-void DesenhaSala(){
+void DesenhaSala(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY){
 
     FILE* arquivo = fopen("Salas\\sala1.txt", "r");
 
-    //fgets vai retornar null no final do arquivo
-    char teste[100];
-    int lin = 0;
+    char mapa[100][100] = {0}; //LINHA X COLUNA
 
-    while(fgets(teste, 100, arquivo)){
+    ///COPIA O MAPA DO ARQUIVO NO VETOR
+    for(int lin = 0; fgets(mapa[lin], 100, arquivo); lin++){ //fgets vai retornar null no final do arquivo
 
-        for(int col = 0; col < 20; col++){ //COLUNA
-            if(teste[col] == 'x'){
-                setColor(COLOR_BLACK, COLOR_WHITE, A_BOLD);
-                mvaddch(lin, col, ACS_BLOCK);
+        for(int col = 0; col < 50; col++){ //COLUNA
+            if(mapa[lin][col] == 'x'){
+                //setColor(COLOR_BLACK, COLOR_WHITE, A_BOLD);
+                //mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
             }
-            if(teste[col] == '@'){
-                setColor(COLOR_GREEN, COLOR_BLACK, 0);
-                mvaddch(lin, col, ACS_DIAMOND);
+            if(mapa[lin][col] == '@'){
+                //setColor(COLOR_GREEN, COLOR_BLACK, 0);
+                //mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
         }
+    }
 
-        lin++;
+    ///VERIFICA EM QUE QUARTO O JOGADOR ESTA
+    enum quartos{
+        QUARTO,
+        SALAO,
+        BANHEIRO,
+        CORREDOR,
+        ENTRADA
+    } quartoAtual;
+
+    if(0 < posJogX && posJogX < 10 && 0 < posJogY && posJogY < 4){
+        quartoAtual = ENTRADA;
+        printw("Esta na entrada\n");
+    }else if(10 < posJogX && posJogX < 14 && 0 < posJogY && posJogY < 9){
+        quartoAtual = CORREDOR;
+        printw("Esta no corredor\n");
+    }else if(14 < posJogX && posJogX < 26 && 0 < posJogY && posJogY < 3){
+        quartoAtual = BANHEIRO;
+        printw("Esta no banheiro\n");
+    }else if(14 < posJogX && posJogX < 26 && 3 < posJogY && posJogY < 9){
+        quartoAtual = SALAO;
+        printw("Esta no salao de festas\n");
+    }else if(0 < posJogX && posJogX < 10 && 4 < posJogY && posJogY < 9){
+        quartoAtual = QUARTO;
+        printw("Esta no quarto\n");
+    }
+
+
+    ///LE O VETOR E DESENHA NA TELA
+    for(int lin = 0; lin < 10; lin++){
+        for(int col = 0; col < 50; col++){ //COLUNA
+
+            if(mapa[lin][col] == 'x'){
+                setColor(COLOR_BLACK, COLOR_WHITE, A_BOLD);
+                mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
+            }
+            if(mapa[lin][col] == '@'){
+                setColor(COLOR_GREEN, COLOR_BLACK, 0);
+                mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
+            }
+        }
     }
 
     fclose(arquivo);
@@ -39,7 +78,7 @@ void DetectaColisoes(int colisoes [100][100]){
 
     while(fgets(teste, 100, arquivo)){
 
-        for(int col = 0; col < 20; col++){ //COLUNA
+        for(int col = 0; col < 50; col++){ //COLUNA
             if(teste[col] != ' '){
                 colisoes[lin][col] = 1;
             }
@@ -62,7 +101,7 @@ int DetectaInteracoes(int x, int y){
 
     while(fgets(teste, 100, arquivo)){
 
-        for(int col = 0; col < 20; col++){ //COLUNA
+        for(int col = 0; col < 50; col++){ //COLUNA
             if(teste[col] == '@'){
                 interacoes[lin][col] = 1;
             }

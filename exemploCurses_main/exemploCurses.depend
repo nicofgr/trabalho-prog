@@ -911,3 +911,219 @@
 
 1655870180 c:\users\usuario\documents\nico\utfpr\primeiro_periodo\fundamentos_da_programacao\aps\exemplocurses\apslib\apslib.h
 
+1655921122 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.c
+	<stdio.h>
+	<curses.h>
+	"APSLib.h"
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+	<stdbool.h>
+
+1655919702 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
+
+1655919606 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\main.c
+	<curses.h>
+	<stdlib.h>
+	<time.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\common\pdcurses.rc
+	<windows.h>
+	"../curses.h"
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\addch.c
+	<curspriv.h>
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\curspriv.h
+	<curses.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\addchstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\addstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\attr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\beep.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\bkgd.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\border.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\clear.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\color.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\debug.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<time.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\delch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\deleteln.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\getch.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\getstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\getyx.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\inch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\inchstr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\initscr.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\inopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\insch.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\insstr.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\instr.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\kernel.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\keyname.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\mouse.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\move.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\outopts.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\overlay.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\pad.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\panel.c
+	<curspriv.h>
+	<panel.h>
+	<stdlib.h>
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\panel.h
+	<curses.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\printw.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\refresh.c
+	<curspriv.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\scanw.c
+	<curspriv.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+	<limits.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\scr_dump.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\scroll.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\slk.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\termattr.c
+	<curspriv.h>
+	<string.h>
+	<limits.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\touch.c
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\util.c
+	<curspriv.h>
+	<stdlib.h>
+	<string.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\pdcurses\window.c
+	<curspriv.h>
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcclip.c
+	"pdcwin.h"
+	<string.h>
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcwin.h
+	<windows.h>
+	<curspriv.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcdisp.c
+	"pdcwin.h"
+	<stdlib.h>
+	<string.h>
+	"../common/acsuni.h"
+	"../common/acs437.h"
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\common\acsuni.h
+
+1642209066 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\common\acs437.h
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcgetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdckbd.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcscrn.c
+	"pdcwin.h"
+	<stdlib.h>
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcsetsc.c
+	"pdcwin.h"
+
+1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcutil.c
+	"pdcwin.h"
+

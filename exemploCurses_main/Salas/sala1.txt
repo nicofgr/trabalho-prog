@@ -1,7 +1,10 @@
-xxxxx xxxxxxxx
-x            x
-x         @  x
-x            x
-x            x
-x            x
-xxxxxxxxxxxxxx
+xxxx xxxxxxxxxxxxxxxxxxxxxx
+x      @  x   x           x
+x                      @  x
+x  @          xxx xxxxxxxxx
+xxxxxxxxxxx   x           x
+x         x               x
+x         x   x           x
+x  @          x        @  x
+x         x   x           x
+xxxxxxxxxxxxxxxxxxxxxxxxxxx
