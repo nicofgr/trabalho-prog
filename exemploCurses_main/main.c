@@ -100,7 +100,7 @@ void initGame(gameData * game)
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
     game->posMapa.x = (game->meioTela.x) - 4;
-    game->posMapa.y = (game->meioTela.y) + 1;
+    game->posMapa.y = (game->meioTela.y) - 1;
 
     game->posMapaAnterior.x = game->posMapa.x;
     game->posMapaAnterior.y = game->posMapa.y;
