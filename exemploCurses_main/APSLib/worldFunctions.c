@@ -35,6 +35,9 @@ void LeMundo(char* nomeArquivo, gameData * game){
                 case '5':
                     game->interactionMap[lin][col] = 5;
                     break;
+                case '7':
+                    game->interactionMap[lin][col] = 7;
+                    break;
                 default:
                     game->interactionMap[lin][col] = 0;
                     break;
@@ -52,7 +55,8 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
         BANHEIRO,
         CORREDOR,
         ENTRADA,
-        FORA
+        FORA,
+        QUARTOFILHO
     } quartoAtual;
 
     if(10 <= posJogX && posJogX <= 14 && 0 < posJogY && posJogY < 9){
@@ -65,6 +69,8 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
         quartoAtual = SALAO;
     }else if(0 < posJogX && posJogX < 10 && 4 < posJogY && posJogY < 9){
         quartoAtual = QUARTO;
+    }else if(8 < posJogX && posJogX < 16 && 9 < posJogY && posJogY < 14){
+        quartoAtual = QUARTOFILHO;
     }else
         quartoAtual = FORA;
 
@@ -73,7 +79,7 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
     switch(quartoAtual){
         case CORREDOR:
             //printw("Corredor\n");
-            DesenhaSala(10, 0, 14, 10, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(10, 0, 14, 9, mapa, telaOffsetX, telaOffsetY);
             break;
         case ENTRADA:
             //printw("Entrada\n");
@@ -90,6 +96,10 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
         case QUARTO:
             //printw("Quarto\n");
             DesenhaSala(0, 4, 10, 9, mapa, telaOffsetX, telaOffsetY);
+            break;
+        case QUARTOFILHO:
+            //printw("QuartoFilho\n");
+            DesenhaSala(8, 10, 16, 14, mapa, telaOffsetX, telaOffsetY);
             break;
         case FORA:
             //printw("Fora\n");
@@ -128,6 +138,11 @@ void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], in
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
             }
 
+            if(mapa[lin][col] == 'o'){
+                setColor(COLOR_WHITE, COLOR_BLACK, A_DIM);
+                mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
+            }
+
             if(mapa[lin][col] == '1'){ //PREFEITO
                 setColor(COLOR_GREEN, COLOR_BLACK, 0);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
@@ -146,6 +161,10 @@ void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], in
             }
             if(mapa[lin][col] == '5'){ //CORPO
                 setColor(COLOR_WHITE, COLOR_RED, 0);
+                mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
+            }
+            if(mapa[lin][col] == '7'){ //FILHO PREFEITO
+                setColor(COLOR_MAGENTA, COLOR_BLACK, A_BOLD);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
         }

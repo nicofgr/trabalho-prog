@@ -7,4 +7,12 @@ x         x               x
 x         x   x           x
 x  1          x        2  x
 x         x   x           x
-xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxx xxxxxxxxxxxxxx
+        oooo oooo          
+        o       o          
+        o       o          
+        o  7    o          
+        ooooooooo          
+
+
+

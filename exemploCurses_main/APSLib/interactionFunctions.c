@@ -42,6 +42,9 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
         case 6:
             policial_2(game);
             break;
+        case 7:
+            filho(game);
+            break;
     }
 
     printf("\n");
