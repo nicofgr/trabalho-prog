@@ -921,7 +921,7 @@
 	<wchar.h>
 	<stdbool.h>
 
-1655996422 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
+1655998833 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -1131,14 +1131,17 @@
 1655996403 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
 	"APSLib.h"
 
-1655996466 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
+1655998899 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
 	"APSLib.h"
 
-1655996066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
+1655999547 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
 	"APSLib.h"
 
-1655996156 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\scenes.c
+1655998833 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\scenes.c
 	"APSLib.h"
 
 1655993806 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\screenmodes.c
+
+1655999137 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\dialogoprefeito.c
+	"APSLib.h"
 

@@ -71,7 +71,7 @@ void MainMenu(gameData * game){
 void Overworld(gameData * game){
 
     ///TESTE
-    game->interacaoDisponivel = DetectaInteracoes(game->interactionMap, game->posJogador.x, game->posJogador.y);
+
 
     setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
     if(game->devMode){
@@ -92,16 +92,17 @@ void Overworld(gameData * game){
 
     //DESENHA MUNDO
     DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y, game->mapa);
+
     //INTERACAO
     if(game->interagir && game->interacaoDisponivel){
-        Dialogo(game->ultimaTecla, &game->interagir);
+        Dialogo(game->ultimaTecla, &game->interagir, game->interacaoDisponivel, game);
     }else{
         game->interagir = 0;
     }
 
-    setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
+    setColor(COLOR_WHITE, COLOR_BLACK, A_STANDOUT);
     if(game->interacaoDisponivel && !(game->interagir))
-        printw("\n\nInteracao disponivel, pressione 'e' para interagir");
+        mvprintw(game->meioTela.y + 10, 0, " > Interacao disponivel, pressione 'e' para interagir");
 
 
     // Exibe o conteúdo na tela (stdscr), getch() também ativa um refresh

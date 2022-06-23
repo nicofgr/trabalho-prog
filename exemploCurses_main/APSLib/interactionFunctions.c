@@ -8,47 +8,33 @@ int DetectaInteracoes(int interactionMap[100][100], int x, int y){
     int esquerda =  interactionMap[y][x-1];
     int direita = interactionMap[y][x+1];
 
-    printw("DetectaInteracoes\n");
+    /*printw("DetectaInteracoes\n");
     printw(" Cima: %d\n", cima);
     printw(" Baixo: %d\n", baixo);
     printw(" Esquerda: %d\n", esquerda);
-    printw(" Direita: %d\n", direita);
+    printw(" Direita: %d\n", direita);*/
 
     return cima + baixo + esquerda + direita;
 
 }
 
-void Dialogo(int a, int *interagir){
+void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
 
-    setColor(COLOR_GREEN, COLOR_BLACK, A_BOLD);
-    printw("\n");
-
-    switch(a){
-        case '1':
-            printw("\n - Ola, sou o prefeito dessa cidade, sobre o que gostaria de falar?\n");
-            printw(" >> Sobre o assassinato da minha esposa.\n");
-            printw(" - Eu nao sei de nada!\n");
-            printw(" - Mas saiba que no que eu puder ajudar eu irei. \n");
-            printw("--------------------------------------------------\n");
-            printw(" > 2 - Como o Prefeito esta?  \n > 3 - Sair.");
+    switch(npcNum){
+        case 1:
+            Prefeito(ultimaTecla, interagir, game);
             break;
-
-        case '2':
-            printw("\n - Ola, sou o prefeito dessa cidade, sobre o que gostaria de falar?\n");
-            printw(" >> Como o Prefeito esta? \n");
-            printw(" - Estou bem, fora os acontecimentos dessa noite que me deixaram meio assustado, estou bem \n");
-            printw("--------------------------------------------------\n");
-            printw(" > 1 - Assassinato da minha esposa \n > 3 - Sair.");
+        case 2:
+            //Empregado();
             break;
-
-        case '3':
-            *interagir = 0;
+        case 3:
+            //Professor();
             break;
-
-        default:
-            printw("\n - Ola, sou o prefeito dessa cidade, sobre o que gostaria de falar?\n");
-            printw("--------------------------------------------------\n");
-            printw(" > 1 - Assassinato da minha esposa \n > 2 - Como o Prefeito esta?  \n > 3 - Sair.");
+        case 4:
+            //Policial();
+            break;
+        case 5:
+            //Corpo();
             break;
     }
 

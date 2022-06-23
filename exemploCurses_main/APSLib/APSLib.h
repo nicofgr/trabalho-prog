@@ -58,7 +58,14 @@ void DesenhaMundo(const int ,const int ,const int,const int, char mapa[100][100]
 void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int *colidindo);
 
 ///INTERACTIONS
-void Dialogo(int a, int* interagir);
+void Dialogo(int a, int* interagir, int npcNum, gameData * game);
 int DetectaInteracoes(int interactionMap[100][100], int x, int y);
+
+///DIALOGOS
+void Prefeito(int ultimaTecla, int *interagir, gameData * game);
+void Empregado(int ultimaTecla,int *interagir);
+void Professor(int ultimaTecla, int *interagir);
+void Policial(int ultimaTecla, int *interagir);
+void Corpo(int ultimaTecla, int *interagir);
 
 #endif // APSLIB_H_INCLUDED

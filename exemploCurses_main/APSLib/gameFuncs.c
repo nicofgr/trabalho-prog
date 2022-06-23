@@ -134,13 +134,12 @@ void handleInputs(gameData * game){
             getmaxyx(stdscr, my, mx);
             game->meioTela.x = mx/2;
             game->meioTela.y = my/2;
-            game->posJogador.x = game->meioTela.x - game->posMapa.x;
-            game->posJogador.y = game->meioTela.y - game->posMapa.y;
-            game->posMapa.x = (game->posJogador.x) - 12;
-            game->posMapa.y = (game->posJogador.y) - 1;
+
+            game->posMapa.x = game->meioTela.x - game->posJogador.x;
+            game->posMapa.y = game->meioTela.y - game->posJogador.y;
+
             game->posMapaAnterior.x = game->posMapa.x;
             game->posMapaAnterior.y = game->posMapa.y;
-
             endwin();
             initScreen(1);
             clear();
@@ -164,7 +163,7 @@ void doUpdate(gameData * game){
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
-    //DetectaInteracoes(&game);
+    game->interacaoDisponivel = DetectaInteracoes(game->interactionMap, game->posJogador.x, game->posJogador.y);
 }
 
 void drawScreen(gameData * game, enum screenMode screenMode){

@@ -47,6 +47,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/APSLib.h" />
+		<Unit filename="APSLib/dialogoPrefeito.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="APSLib/gameFuncs.c">
 			<Option compilerVar="CC" />
 		</Unit>
