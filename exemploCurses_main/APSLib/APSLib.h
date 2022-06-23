@@ -42,6 +42,7 @@ typedef struct gameData
 ///GAME
 void initScreen(screenMode);
 void setColor(short int fg, short int bg, chtype attr);
+
 void initGame(gameData * game);
 void handleInputs(gameData * game);
 void doUpdate(gameData * game);
@@ -52,7 +53,7 @@ void MainMenu(gameData * game);
 void Overworld(gameData * game);
 
 ///WORLD
-void LeMundo(char* nomeArquivo, char mapa[100][100], int interactionMap[100][100]);
+void LeMundo(char* nomeArquivo, gameData * game);
 void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], int telaOffsetX, int telaOffsetY);
 void DesenhaMundo(const int ,const int ,const int,const int, char mapa[100][100]);
 void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int *colidindo);
@@ -61,11 +62,12 @@ void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int 
 void Dialogo(int a, int* interagir, int npcNum, gameData * game);
 int DetectaInteracoes(int interactionMap[100][100], int x, int y);
 
-///DIALOGOS
-void Prefeito(int ultimaTecla, int *interagir, gameData * game);
-void Empregado(int ultimaTecla,int *interagir);
-void Professor(int ultimaTecla, int *interagir);
-void Policial(int ultimaTecla, int *interagir);
-void Corpo(int ultimaTecla, int *interagir);
+///DIALOGOS DOS PERSONAGENS
+void prefeito(gameData * game);
+void policial(gameData * game);
+void corpo(gameData * game);
+void policial_2 (gameData * game);
+void professor(gameData * game);
+
 
 #endif // APSLIB_H_INCLUDED

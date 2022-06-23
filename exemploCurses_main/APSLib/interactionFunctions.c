@@ -20,22 +20,31 @@ int DetectaInteracoes(int interactionMap[100][100], int x, int y){
 
 void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
 
+    endwin();
+    system("cls");
+
     switch(npcNum){
         case 1:
-            Prefeito(ultimaTecla, interagir, game);
+            prefeito("nome");
             break;
         case 2:
-            //Empregado();
+
             break;
         case 3:
-            //Professor();
+            professor(game);
             break;
         case 4:
-            //Policial();
+            policial(game);
             break;
         case 5:
-            //Corpo();
+            corpo(game);
             break;
     }
 
+    printf("\n");
+    system("pause");
+    game->interagir = 0;
+
 }
+
+

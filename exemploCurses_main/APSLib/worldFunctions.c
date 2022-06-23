@@ -1,42 +1,42 @@
 #include "APSLib.h"
 
-void LeMundo(char* nomeArquivo, char mapa[100][100], int interactionMap[100][100]){
+void LeMundo(char* nomeArquivo, gameData * game){
 
     FILE* arquivo = fopen("Salas\\sala1.txt", "r");
 
     ///INICIALIZA O VETOR
     for(int i = 0; i < 100; i++){
        for(int j = 0; j < 100; j++){
-            mapa[i][j] = ' ';
+            game->mapa[i][j] = ' ';
         }
     }
 
     ///COPIA O MAPA DO ARQUIVO NO VETOR
-    for(int lin = 0; fgets(mapa[lin], 100, arquivo); lin++){}; //fgets vai retornar null no final do arquivo
+    for(int lin = 0; fgets(game->mapa[lin], 100, arquivo); lin++){}; //fgets vai retornar null no final do arquivo
 
     fclose(arquivo);
 
     ///DESENHA O MAPA DE INTERAÇÕES
     for(int lin = 0; lin < 100; lin++){
        for(int col = 0; col < 100; col++){
-            switch(mapa[lin][col]){
+            switch(game->mapa[lin][col]){
                 case '1':
-                    interactionMap[lin][col] = 1;
+                    game->interactionMap[lin][col] = 1;
                     break;
                 case '2':
-                    interactionMap[lin][col] = 2;
+                    game->interactionMap[lin][col] = 2;
                     break;
                 case '3':
-                    interactionMap[lin][col] = 3;
+                    game->interactionMap[lin][col] = 3;
                     break;
                 case '4':
-                    interactionMap[lin][col] = 4;
+                    game->interactionMap[lin][col] = 4;
                     break;
                 case '5':
-                    interactionMap[lin][col] = 5;
+                    game->interactionMap[lin][col] = 5;
                     break;
                 default:
-                    interactionMap[lin][col] = 0;
+                    game->interactionMap[lin][col] = 0;
                     break;
             }
         }

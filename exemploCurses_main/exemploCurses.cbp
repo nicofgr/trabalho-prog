@@ -47,10 +47,16 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/APSLib.h" />
+		<Unit filename="APSLib/dialogoPolicial.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="APSLib/dialogoPrefeito.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/gameFuncs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="APSLib/iniciarTelaDialogo.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/interactionFunctions.c">
