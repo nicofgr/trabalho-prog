@@ -313,7 +313,7 @@ void corpo(gameData * game)
 {
     char nome[50];
     strcpy(nome, game->nomePersonagem);
-    printf("\n\nVoce para e observa o corpo, com uma leitura fria da situacao, voce nao ve marcas de luta, do lado do corpo ha uma municao de 9mm (tipo de arma) no chao e ve que a o vestido esta cheio de sangue, provavelmente o ferimento provavelmente esta na barriga dela, mas para nao interferir nas provas ate a chegada do perito criminal voce nao abre o vestido.\n\n");
+    printf("\n\nVoce para e observa o banheiro todo baguncado com remedios e produtos de beleza jogados no chao, e depois o corpo, com uma leitura fria da situacao, voce nao ve marcas de luta, do lado do corpo ha uma municao de 9mm (tipo de arma) no chao e ve que a o vestido esta intacto e levemente ensanguentado na regiao do abdomen e possuia sangue em seus dedos, provavelmente o ferimento esta na barriga dela e ela tentou tampar o machucado com as maos, mas para nao interferir nas provas ate a chegada do perito criminal voce nao abre o vestido para averiguar a lesao.\n\n");
     return;
 }
 
@@ -392,7 +392,8 @@ void policial_2 (gameData * game)
             if(j==6)
             {
                 printf("\n\nPolicial James - Como?");
-                printf("\n\nO prefeito sai de seu quarto em sua direcao e comeca a falar.");
+                printf("\n\nO prefeito sai de seu quarto, vai em sua direcao e comeca a falar.");
+                printf("\n\nPrefeito – Outros? Como assim outros?");
                 printf("\n\nDetetive %s - Na verdade, nos temos aqui uma cena de ...\n",nome);
                 char k[100];
                 scanf("%s",k);

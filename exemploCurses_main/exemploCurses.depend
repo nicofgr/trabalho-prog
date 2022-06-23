@@ -1128,13 +1128,13 @@
 1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcutil.c
 	"pdcwin.h"
 
-1656013676 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
+1656013736 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
 	"APSLib.h"
 
 1656013703 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
 	"APSLib.h"
 
-1656012716 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
+1656013762 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
 	"APSLib.h"
 
 1656012256 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\scenes.c
