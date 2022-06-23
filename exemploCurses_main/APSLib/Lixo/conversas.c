@@ -1,13 +1,15 @@
 #include "APSLib.h"
 #include <string.h>
-void prefeito(gameData * game)
-{
+void prefeito(gameData * game){
+
+
     char nome[50];
     strcpy(nome, game->nomePersonagem);
+
     printf("\n\nPrefeito Jonny - Oh, Detetive %s, 1 segundo, deixe eu enxugar minhas lagrimas... Sniff... Pronto, posso ajudar em algo sobre a investigacao criminal?",nome);
     printf("\n1- Me fale sobre sua mulher. \n2- Onde você estava quando as luzes se apagaram? \n3- Você escutou algo quando a energia caiu?");
-    int a=0;
-    scanf("%d",a);
+     int a=0;
+     scanf("%d",a);
      switch(a)
      {
      case 1:
@@ -435,6 +437,7 @@ void professor(gameData * game)
 {
     char nome[50];
     strcpy(nome, game->nomePersonagem);
+
     printf("\n\nProfessor Samuel ? Pelas suas vestimentas presumo que seja o detetive, prazer, sou Samuel, professor particular do filho do prefeito.");
     printf("\n 1- Poderia me dizer como e sua relacao com a familia do prefeito?\n 2- Onde voce estava quando a luz voltou?\n 3- O que e essa macha cor de vinho em sua gravata?");
     int a =0;
@@ -522,191 +525,3 @@ void professor(gameData * game)
             }
 }
     }}
-
-
-void filho (gameData * game)
-{
-    char nome[50];
-    strcpy(nome, game->nomePersonagem);
-    printf("\n\nFilho Arnold – Quem e voce e que roupa de idiota e essa? Voce por acaso foi convidado? Isso nao e festa fantasia nao! ");
-    printf("\n\n 1- Oh moleque, me diz logo, fala um pouco sobre a sua mae.  \n 2- O garoto, voce escutou algo quando a luz apagou? \n 3- So me responde, o que seu professor achava da sua mae?");
-    int a =0;
-    scanf("%d",&a);
-    switch(a)
-    {
-    case 1 :
-        {
-            printf("\n\nFilho Arnold – A velha foi tarde, ela me proibia de sair com os amigos, parou de me dar mesada e ainda me obrigava a\nestudar com o idiota do professor particular, pelo menos agora acho que vou poder jogar videogame em paz!");
-            printf("\n 1- Onde o mordomo estava? \n2- Seu pai fica muito em casa? \n3- Qual a profissao dos seus sonhos? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("Filho Arnold – Eu acho que ele tava na porta do banheiro, talvez ele seja o assassino, quem sabe...");
-                    return;
-                }
-            case 2:
-                {
-                    printf("Filho Arnold – Ate que fica na parte da manha, mas quando ele sai ele costuma chegar so na madrugada.");
-                    return;
-                }
-            case 3:
-                    printf("Filho Arnold – Eu quero ser herdeiro, acho que e isso.");
-                    return;
-            }
-
-        }
-    case 2:
-     {
-         printf("\n\nFilho Arnold – Eu nao me lembro nao, talvez trovejando muito.");
-         printf("\n 1- Onde o mordomo estava? \n2- Seu pai fica muito em casa? \n3- Qual a profissao dos seus sonhos? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("\nFilho Arnold - Eu acho que ele tava na porta do banheiro, talvez ele seja o assassino, quem sabe...");
-                    return;
-                }
-            case 2:
-                {
-                    printf("\nFilho Arnold - Ate que fica na parte da manha, mas quando ele sai ele costuma chegar so na madrugada.");
-                    return;
-                }
-            case 3:
-                    printf("\nFilho Arnold - Eu quero ser herdeiro, acho que e isso.");
-                    return;
-            }
-
-        }
-    case 3:
-     {
-         printf("\n\nFilho Arnold - Ele nao gostava muito dela nao, ainda mais depois que\nela diminuiu o dinheiro que ele ganhava, acho que ele tem inveja da nossa família, eu tento nem falar muito com ele... ");
-         printf("\n 1- Onde o mordomo estava? \n2- Seu pai fica muito em casa? \n3- Qual a profissao dos seus sonhos? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("\nFilho Arnold - Eu acho que ele tava na porta do banheiro, talvez ele seja o assassino, quem sabe...");
-                    return;
-                }
-            case 2:
-                {
-                    printf("\nFilho Arnold - Ate que fica na parte da manha, mas quando ele sai ele costuma chegar so na madrugada.");
-                    return;
-                }
-            case 3:
-                    printf("\nFilho Arnold - Eu quero ser herdeiro, acho que e isso.");
-                    return;
-            }
-
-        }}
-
-
-
-
-
-
-
-
-
-}
-
-void mordomo (gameData * game)
-{
-    char nome[50];
-    strcpy(nome, game->nomePersonagem);
-    printf("\n\nMordomo Donald – Senhor detetive, que noite tragica nao? Posso ajudar sua investigacao respondendo algumas perguntas?");
-    printf("\n\n 1- Quais tipos de bebidas voce serviu hoje na festa?  \n 2- Quem foi a pessoa que estava mais proxima da primeira dama quando a luz se apagou? \n 3- Onde voce estava quando acabou a energia?");
-    int a =0;
-    scanf("%d",&a);
-    switch(a)
-    {
-    case 1 :
-        {
-            printf("\n\nMordomo Donald – Hoje foi servido apenas champagne e refrigerante.");
-            printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
-                    return;
-                }
-            case 2:
-                {
-                    printf("\nMordomo Donald – A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
-                    return;
-                }
-            case 3:
-                    {printf("\nMordomo Donald – Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
-                    return;
-            }}
-
-        }
-    case 2:
-     {
-         printf("\n\nMordomo Donald – Creio que alguns minutos antes da luz se apagar o policial James estava conversando com a primeira dama.");
-         printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
-                    return;
-                }
-            case 2:
-                {
-                    printf("\nMordomo Donald – A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
-                    return;
-                }
-            case 3:
-                {
-
-                    printf("\nMordomo Donald – Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
-                    return;
-            }
-
-        }}
-    case 3:
-     {
-         printf("\n\nMordomo Donald – Eu estava no corredor entre o quarto e o salao, mas lembro que alguem estava nas escadas atras de mim.");
-         printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
-            int s =0;
-            scanf("%d",&s);
-
-            switch (s)
-            {
-            case 1:
-                {
-                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
-                    return;
-                }
-            case 2:
-                {
-                    printf("\nMordomo Donald – A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
-                    return;
-                }
-            case 3:
-                 {
-                     printf("\nMordomo Donald – Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
-                    return;
-            }}
-        }}
-
-
-}

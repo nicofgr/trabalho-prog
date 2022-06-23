@@ -68,6 +68,7 @@ void policial(gameData * game);
 void corpo(gameData * game);
 void policial_2 (gameData * game);
 void professor(gameData * game);
-
+void filho(gameData * game);
+void mordomo(gameData * game);
 
 #endif // APSLIB_H_INCLUDED

@@ -43,20 +43,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="APSLib/APSLib.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="APSLib/APSLib.h" />
-		<Unit filename="APSLib/dialogoPolicial.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="APSLib/dialogoPrefeito.c">
+		<Unit filename="APSLib/conversas.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/gameFuncs.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="APSLib/iniciarTelaDialogo.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/interactionFunctions.c">

@@ -25,10 +25,10 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
 
     switch(npcNum){
         case 1:
-            prefeito("nome");
+            prefeito(game);
             break;
         case 2:
-
+            mordomo(game);
             break;
         case 3:
             professor(game);
