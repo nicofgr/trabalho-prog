@@ -1,6 +1,6 @@
 #include "APSLib.h"
 
-void LeMundo(char* nomeArquivo, char mapa[100][100]){
+void LeMundo(char* nomeArquivo, char mapa[100][100], int interactionMap[100][100]){
 
     FILE* arquivo = fopen("Salas\\sala1.txt", "r");
 
@@ -15,6 +15,32 @@ void LeMundo(char* nomeArquivo, char mapa[100][100]){
     for(int lin = 0; fgets(mapa[lin], 100, arquivo); lin++){}; //fgets vai retornar null no final do arquivo
 
     fclose(arquivo);
+
+    ///DESENHA O MAPA DE INTERAÇÕES
+    for(int lin = 0; lin < 100; lin++){
+       for(int col = 0; col < 100; col++){
+            switch(mapa[lin][col]){
+                case '1':
+                    interactionMap[lin][col] = 1;
+                    break;
+                case '2':
+                    interactionMap[lin][col] = 2;
+                    break;
+                case '3':
+                    interactionMap[lin][col] = 3;
+                    break;
+                case '4':
+                    interactionMap[lin][col] = 4;
+                    break;
+                case '5':
+                    interactionMap[lin][col] = 5;
+                    break;
+                default:
+                    interactionMap[lin][col] = 0;
+                    break;
+            }
+        }
+    }
 }
 
 void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY, char mapa[100][100]){

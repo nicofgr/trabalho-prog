@@ -80,7 +80,7 @@ void initGame(gameData * game){
     game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
-    LeMundo("Salas\\sala1.txt", game->mapa);
+    LeMundo("Salas\\sala1.txt", game->mapa, game->interactionMap);
 }
 
 // Gerencia entradas do usuário e controla o estado interno em game

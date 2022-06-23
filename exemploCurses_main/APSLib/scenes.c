@@ -71,7 +71,7 @@ void MainMenu(gameData * game){
 void Overworld(gameData * game){
 
     ///TESTE
-    game->interacaoDisponivel = DetectaInteracoes(game->mapa, game->posJogador.x, game->posJogador.y);
+    game->interacaoDisponivel = DetectaInteracoes(game->interactionMap, game->posJogador.x, game->posJogador.y);
 
     setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
     if(game->devMode){

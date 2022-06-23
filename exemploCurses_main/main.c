@@ -3,37 +3,29 @@
 #include <time.h>
 #include "APSLib/APSLib.h"
 
-int main(int argc, char *argv[])
-{
-    // estrutura com dados internos da aplicação
-    gameData game;
+int main(int argc, char *argv[]){
 
-    // inicializa a tela pelo Curses e o estado inicial da aplicação
-    initScreen(GAME);
+    gameData game;  // estrutura com dados internos da aplicação
+
+    initScreen(GAME); // inicializa a tela pelo Curses e o estado inicial da aplicação
     initGame(&game);
 
-    // Laço principal sem retorno, pode ser removido para exibição direta de informação na tela
-	while(1)
-    {
-        // Gerencia entradas do usuário pelo teclado
-        handleInputs(&game);
+	while(1){ // Laço principal sem retorno, pode ser removido para exibição direta de informação na tela
 
-        // Gerencia lógica da aplicação
-        doUpdate(&game);
+        handleInputs(&game);  // Gerencia entradas do usuário pelo teclado
 
-        // Atualiza a tela
+        doUpdate(&game); // Gerencia lógica da aplicação
+
         if(game.menuInicial){
-            drawScreen(&game, MENU);
+            drawScreen(&game, MENU); // Atualiza a tela
         }else{
             drawScreen(&game, GAME);
         }
 
-        // Controla o FPS da aplicação
-        napms(10);
+        napms(10); // Controla o FPS da aplicação
     }
 
-    // Encerra a tela inicializada em initScreen
-    endwin();
+    endwin(); // Encerra a tela inicializada em initScreen
 
 	return 0;
 }

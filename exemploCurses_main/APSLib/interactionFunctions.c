@@ -1,109 +1,21 @@
 #include "APSLib.h"
 
 
-int DetectaInteracoes(char mapa[100][100], int x, int y){
+int DetectaInteracoes(int interactionMap[100][100], int x, int y){
 
-    char cima = mapa[y-1][x];
-    char baixo = mapa[y+1][x];
-    char esquerda =  mapa[y][x-1];
-    char direita = mapa[y][x+1];
+    int cima = interactionMap[y-1][x];
+    int baixo = interactionMap[y+1][x];
+    int esquerda =  interactionMap[y][x-1];
+    int direita = interactionMap[y][x+1];
 
     printw("DetectaInteracoes\n");
-    printw(" Cima: %c\n", cima);
-    printw(" Baixo: %c\n", baixo);
-    printw(" Esquerda: %c\n", esquerda);
-    printw(" Direita: %c\n", direita);
+    printw(" Cima: %d\n", cima);
+    printw(" Baixo: %d\n", baixo);
+    printw(" Esquerda: %d\n", esquerda);
+    printw(" Direita: %d\n", direita);
 
-    switch(cima){
-        case '1':
-            printw("Prefeito detectado\n");
-            return 1;
-            break;
-        case '2':
-            printw("Mordomo detectado\n");
-            return 2;
-            break;
-        case '3':
-            printw("Professor detectado\n");
-            return 3;
-            break;
-        case '4':
-            printw("Policial detectado\n");
-            return 4;
-            break;
-        case '5':
-            printw("Corpo detectado\n");
-            return 5;
-            break;
-    }
-    switch(baixo){
-        case '1':
-            printw("Prefeito detectado\n");
-            return 1;
-            break;
-        case '2':
-            printw("Mordomo detectado\n");
-            return 2;
-            break;
-        case '3':
-            printw("Professor detectado\n");
-            return 3;
-            break;
-        case '4':
-            printw("Policial detectado\n");
-            return 4;
-            break;
-        case '5':
-            printw("Corpo detectado\n");
-            return 5;
-            break;
-    }
-    switch(esquerda){
-        case '1':
-            printw("Prefeito detectado\n");
-            return 1;
-            break;
-        case '2':
-            printw("Mordomo detectado\n");
-            return 2;
-            break;
-        case '3':
-            printw("Professor detectado\n");
-            return 3;
-            break;
-        case '4':
-            printw("Policial detectado\n");
-            return 4;
-            break;
-        case '5':
-            printw("Corpo detectado\n");
-            return 5;
-            break;
-    }
-    switch(direita){
-        case '1':
-            printw("Prefeito detectado\n");
-            return 1;
-            break;
-        case '2':
-            printw("Mordomo detectado\n");
-            return 2;
-            break;
-        case '3':
-            printw("Professor detectado\n");
-            return 3;
-            break;
-        case '4':
-            printw("Policial detectado\n");
-            return 4;
-            break;
-        case '5':
-            printw("Corpo detectado\n");
-            return 5;
-            break;
-    }
+    return cima + baixo + esquerda + direita;
 
-    return 0;
 }
 
 void Dialogo(int a, int *interagir){

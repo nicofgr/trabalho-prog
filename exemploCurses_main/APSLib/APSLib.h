@@ -35,6 +35,7 @@ typedef struct gameData
     struct pos meioTela;
 
     char mapa[100][100];
+    int interactionMap[100][100];
 
 } gameData;
 
@@ -51,13 +52,13 @@ void MainMenu(gameData * game);
 void Overworld(gameData * game);
 
 ///WORLD
-void LeMundo(char* nomeArquivo, char mapa[100][100]);
+void LeMundo(char* nomeArquivo, char mapa[100][100], int interactionMap[100][100]);
 void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], int telaOffsetX, int telaOffsetY);
 void DesenhaMundo(const int ,const int ,const int,const int, char mapa[100][100]);
 void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int *colidindo);
 
 ///INTERACTIONS
 void Dialogo(int a, int* interagir);
-int DetectaInteracoes(char mapa[100][100], int x, int y);
+int DetectaInteracoes(int interactionMap[100][100], int x, int y);
 
 #endif // APSLIB_H_INCLUDED

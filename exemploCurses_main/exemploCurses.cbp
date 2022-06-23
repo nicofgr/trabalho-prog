@@ -47,6 +47,21 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="APSLib/APSLib.h" />
+		<Unit filename="APSLib/gameFuncs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="APSLib/interactionFunctions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="APSLib/scenes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="APSLib/screenModes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="APSLib/worldFunctions.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="PDCurses/common/acs437.h" />
 		<Unit filename="PDCurses/common/acsgr.h" />
 		<Unit filename="PDCurses/common/acsuni.h" />
