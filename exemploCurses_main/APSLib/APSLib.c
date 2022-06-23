@@ -137,34 +137,6 @@ void DetectaColisoes(char mapa[100][100], int posJogadorX, int posJogadorY, int*
     }
 }
 
-int DetectaInteracoes(int x, int y){
-
-    int interacoes[100][100] = {0};
-    FILE* arquivo = fopen("Salas\\sala1.txt", "r");
-
-    //fgets vai retornar null no final do arquivo
-    char teste[100];
-    int lin = 0;
-
-    while(fgets(teste, 100, arquivo)){
-
-        for(int col = 0; col < 50; col++){ //COLUNA
-            if(teste[col] == '1'){
-                interacoes[lin][col] = 1;
-            }
-        }
-
-        lin++;
-    }
-
-    fclose(arquivo);
-
-    if(interacoes[y+1][x] || interacoes[y-1][x] || interacoes[y][x+1] || interacoes[y][x-1]){
-        return 1;
-    }else
-        return 0;
-}
-
 void MenuInicial(gameData * game){
 
     clear();
@@ -231,9 +203,114 @@ void MenuInicial(gameData * game){
             }
 
     ///Meio da tela
-    mvaddch(game->meioTela.y, game->meioTela.x, 'x');
+    //mvaddch(game->meioTela.y, game->meioTela.x, 'x');
 
     refresh();
+}
+
+int DetectaInteracoes(char mapa[100][100], int x, int y){
+
+    char cima = mapa[y-1][x];
+    char baixo = mapa[y+1][x];
+    char esquerda =  mapa[y][x-1];
+    char direita = mapa[y][x+1];
+
+    printw("DetectaInteracoes\n");
+    printw(" Cima: %c\n", cima);
+    printw(" Baixo: %c\n", baixo);
+    printw(" Esquerda: %c\n", esquerda);
+    printw(" Direita: %c\n", direita);
+
+    switch(cima){
+        case '1':
+            printw("Prefeito detectado\n");
+            return 1;
+            break;
+        case '2':
+            printw("Mordomo detectado\n");
+            return 2;
+            break;
+        case '3':
+            printw("Professor detectado\n");
+            return 3;
+            break;
+        case '4':
+            printw("Policial detectado\n");
+            return 4;
+            break;
+        case '5':
+            printw("Corpo detectado\n");
+            return 5;
+            break;
+    }
+    switch(baixo){
+        case '1':
+            printw("Prefeito detectado\n");
+            return 1;
+            break;
+        case '2':
+            printw("Mordomo detectado\n");
+            return 2;
+            break;
+        case '3':
+            printw("Professor detectado\n");
+            return 3;
+            break;
+        case '4':
+            printw("Policial detectado\n");
+            return 4;
+            break;
+        case '5':
+            printw("Corpo detectado\n");
+            return 5;
+            break;
+    }
+    switch(esquerda){
+        case '1':
+            printw("Prefeito detectado\n");
+            return 1;
+            break;
+        case '2':
+            printw("Mordomo detectado\n");
+            return 2;
+            break;
+        case '3':
+            printw("Professor detectado\n");
+            return 3;
+            break;
+        case '4':
+            printw("Policial detectado\n");
+            return 4;
+            break;
+        case '5':
+            printw("Corpo detectado\n");
+            return 5;
+            break;
+    }
+    switch(direita){
+        case '1':
+            printw("Prefeito detectado\n");
+            return 1;
+            break;
+        case '2':
+            printw("Mordomo detectado\n");
+            return 2;
+            break;
+        case '3':
+            printw("Professor detectado\n");
+            return 3;
+            break;
+        case '4':
+            printw("Policial detectado\n");
+            return 4;
+            break;
+        case '5':
+            printw("Corpo detectado\n");
+            return 5;
+            break;
+    }
+
+    return 0;
 }
 
 void Dialogo(int a, int *interagir){

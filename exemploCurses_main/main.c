@@ -19,7 +19,7 @@ typedef struct gameData
     bool devMode;
     int ultimaTecla;
     int colisao;
-    int interacao;
+    int interacaoDisponivel;
     int interagir;
 
     struct pos{
@@ -108,10 +108,10 @@ void initGame(gameData * game)
     game->ultimaTecla = -1;
 
     game->colisao = 0;
-    game->interacao = 0;
+    game->interacaoDisponivel = 0;
     game->interagir = 0;
 
-    game->menuInicial = TRUE;
+    game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game->mapa);
@@ -146,7 +146,7 @@ void handleInputs(gameData * game)
             game->posMapa.x -= 1;
             break;
         case 'e':
-            if(game->interacao)
+            if(game->interacaoDisponivel)
                 game->interagir = 1;
             break;
         case 'q':
@@ -185,8 +185,6 @@ void handleInputs(gameData * game)
 
 void doUpdate(gameData * game)
 {
-    game->interacao = DetectaInteracoes(game->meioTela.x - game->posMapa.x, game->meioTela.y - game->posMapa.y);
-
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
@@ -199,11 +197,16 @@ void doUpdate(gameData * game)
 
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
+
+    //DetectaInteracoes(&game);
 }
 
 void drawScreen(gameData * game){
 
     clear();
+
+    //TESTE
+    game->interacaoDisponivel = DetectaInteracoes(game->mapa, game->posJogador.x, game->posJogador.y);
 
         setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
     if(game->devMode){
@@ -225,14 +228,14 @@ void drawScreen(gameData * game){
     //DESENHA MUNDO
     DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y, game->mapa);
     //INTERACAO
-    if(game->interagir && game->interacao){
+    if(game->interagir && game->interacaoDisponivel){
         Dialogo(game->ultimaTecla, &game->interagir);
     }else{
         game->interagir = 0;
     }
 
     setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
-    if(game->interacao && !(game->interagir))
+    if(game->interacaoDisponivel && !(game->interagir))
         printw("\n\nInteracao disponivel, pressione 'e' para interagir");
 
 
