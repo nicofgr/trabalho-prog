@@ -1,5 +1,4 @@
 #include "APSLib.h"
-#include <string.h>
 void prefeito(gameData * game)
 {
     char nome[50];

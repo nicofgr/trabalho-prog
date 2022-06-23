@@ -54,3 +54,5 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
 }
 
 
+
+

@@ -84,7 +84,11 @@ void Overworld(gameData * game){
         printw("Colisao: %d\n", game->colisao);
         printw("Ultima tecla: %c\n", game->ultimaTecla);
     }else
-        printw("Pressione F1 para mostrar informacoes do jogo.");
+        printw("Pressione F1 para mostrar informacoes do jogo.\n");
+
+    setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);
+    printw("Pressione q para salvar sua posicao atual\n");
+    printw("Pressione Q para sair do jogo\n");
 
     //DESENHA JOGADOR
     setColor(COLOR_WHITE, COLOR_BLACK, A_BOLD);

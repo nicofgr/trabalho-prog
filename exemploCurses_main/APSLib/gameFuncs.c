@@ -65,8 +65,8 @@ void initGame(gameData * game){
     game->posJogador.x = game->meioTela.x - game->posMapa.x;
     game->posJogador.y = game->meioTela.y - game->posMapa.y;
 
-    game->posMapa.x = (game->meioTela.x) - 4;
-    game->posMapa.y = (game->meioTela.y) - 1;
+    ///Define pos inicial
+    LeDados(game);
 
     game->posMapaAnterior.x = game->posMapa.x;
     game->posMapaAnterior.y = game->posMapa.y;
@@ -120,6 +120,7 @@ void handleInputs(gameData * game){
                 Dialogo(game->ultimaTecla, &game->interagir, 6, game);
             break;
         case 'q':
+            SalvaDados(game);
             break;
         case 'Q':
             curs_set(1);

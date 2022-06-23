@@ -3,6 +3,7 @@
 #include <curses.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 // 8 colors for standard Curses
 #define PALLETE_SIZE (COLOR_WHITE - COLOR_BLACK + 1)
 
@@ -47,6 +48,10 @@ void initGame(gameData * game);
 void handleInputs(gameData * game);
 void doUpdate(gameData * game);
 void drawScreen(gameData * game, enum screenMode);
+
+///DATA
+void SalvaDados(gameData * game);
+void LeDados(gameData * game);
 
 ///SCENES
 void MainMenu(gameData * game);

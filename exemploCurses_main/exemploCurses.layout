@@ -2,54 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="APSLib\worldFunctions.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="175" topLine="2" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\pdcurses\addchstr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\curses.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="52427" topLine="1256" />
+			<Cursor1 position="902" topLine="42" />
 		</Cursor>
 	</File>
 	<File name="APSLib\scenes.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5626" topLine="23" />
+			<Cursor1 position="5626" topLine="86" />
 		</Cursor>
 	</File>
-	<File name="APSLib\conversasFilhoEMordomo.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="PDCurses\pdcurses\addstr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7767" topLine="152" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\pdcurses\clear.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2172" topLine="99" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\pdcurses\inopts.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5883" topLine="205" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\pdcurses\initscr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4194" topLine="82" />
-		</Cursor>
-	</File>
-	<File name="APSLib\interactionFunctions.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1087" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="PDCurses\pdcurses\addch.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8597" topLine="245" />
+			<Cursor1 position="34" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="APSLib\conversas.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -63,14 +28,39 @@
 			<Collapse line="452" />
 		</Folding>
 	</File>
-	<File name="APSLib\gameFuncs.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="PDCurses\pdcurses\inopts.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2122" topLine="72" />
+			<Cursor1 position="5883" topLine="205" />
 		</Cursor>
 	</File>
-	<File name="PDCurses\pdcurses\addstr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="PDCurses\pdcurses\addch.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="34" topLine="0" />
+			<Cursor1 position="8597" topLine="245" />
+		</Cursor>
+	</File>
+	<File name="APSLib\conversasFilhoEMordomo.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7767" topLine="152" />
+		</Cursor>
+	</File>
+	<File name="PDCurses\pdcurses\initscr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4194" topLine="82" />
+		</Cursor>
+	</File>
+	<File name="APSLib\interactionFunctions.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="864" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="APSLib\gameFuncs.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="644" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="PDCurses\pdcurses\clear.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2172" topLine="99" />
 		</Cursor>
 	</File>
 	<File name="PDCurses\common\pdcurses.rc" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -80,12 +70,22 @@
 	</File>
 	<File name="APSLib\APSLib.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1942" topLine="23" />
+			<Cursor1 position="1683" topLine="45" />
 		</Cursor>
 	</File>
-	<File name="APSLib\worldFunctions.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="PDCurses\pdcurses\addchstr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1279" topLine="21" />
+			<Cursor1 position="16" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="175" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="PDCurses\curses.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="52427" topLine="1256" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
