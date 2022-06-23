@@ -1,319 +1,250 @@
 #include "APSLib.h"
 #include <string.h>
-void prefeito(gameData * game)
-{
+void prefeito(gameData * game){
+
     char nome[50];
     strcpy(nome, game->nomePersonagem);
     printf("\n\nPrefeito Jonny - Oh, Detetive %s, 1 segundo, deixe eu enxugar minhas lagrimas... Sniff... Pronto, posso ajudar em algo sobre a investigacao criminal?",nome);
-    printf("\n1- Me fale sobre sua mulher. \n2- Onde voce estava quando as luzes se apagaram? \n3- Voce escutou algo quando a energia caiu?");
+    printf("\n1- Me fale sobre sua mulher. \n2- Onde você estava quando as luzes se apagaram? \n3- Você escutou algo quando a energia caiu?");
     int a=0;
-    scanf("%d",&a);
-     switch(a)
-     {
-     case 1:
-        {
-           printf("Prefeito Jonny - Jessica era uma mulher complicada, mas eu a amava. Havia momentos em que nos brigavamos e eu acabava passando dos limites, mas tambem ela era muito controladora, mal deixava eu sair com meus amigos e tambem gastava dinheiro de mais, mas fora as partes ruins, ela era perfeita...");
-           int c =0;
-           printf("\n1- Alguem da festa possuia algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
-          scanf("%d",&c);
-          switch(c)
-          {
-          case 1 :
-            {
-                printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
-                return;
+    scanf("%d",a);
+    switch(a){
+        case 1:{
+            printf("Prefeito Jonny - Jessica era uma mulher complicada, mas eu a amava. Havia momentos em que nos brigavamos e eu acabava passando dos limites, mas tambem ela era muito controladora, mal deixava eu sair com meus amigos e tambem gastava dinheiro de mais, mas fora as partes ruins, ela era perfeita...");
+            int c =0;
+            printf("\n1- Alguem da festa possuia algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
+            scanf("%d",&c);
+            switch(c){
+                case 1 :{
+                    printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
+                    return;
+                }
+                case 2:{
+                    printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
+                    return;
+                }
+                case 3:
+                    printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
+                    return;
             }
-          case 2:
-            {
-             printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
-            return;
-            }
-          case 3 :
-            printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
-            return;
-          }
         }
-          case 2:
-            {
-                printf("\n\nPrefeito Jonny – Eu estava descendo as escadas do segundo andar junto com o mordomo procurando alguma lanterna ou qualquer outra fonte de luz.");
-                int c =0;
-                printf("\n 1- Alguem da festa possuía algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
-                scanf("%d",&c);
-          switch(c)
-          {
-          case 1 :
-            {
-                printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
-                return;
+        case 2:{
+            printf("\n\nPrefeito Jonny – Eu estava descendo as escadas do segundo andar junto com o mordomo procurando alguma lanterna ou qualquer outra fonte de luz.");
+            int c =0;
+            printf("\n 1- Alguem da festa possuía algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
+            scanf("%d",&c);
+            switch(c){
+                case 1 :{
+                    printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
+                    return;
+                }
+                case 2:{
+                    printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
+                    return;
+                }
+                case 3 :
+                    printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
+                    return;
             }
-          case 2:
-            {
-             printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
-            return;
-            }
-          case 3 :
-            printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
-            return;
-          }
-            }
-          case 3 :
-            {
-                printf("\n\nPrefeito Jonny - Estava trovejando tanto que eu so escutei o barulho dos raios.");
-             printf("\n 1- Alguem da festa possuía algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
-        int c =0;
-        scanf("%d",&c);
-          switch(c)
-          {
-          case 1 :
-            {
-                printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
-                return;
-            }
-          case 2:
-            {
-             printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
-            return;
-            }
-          case 3 :
-            printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
-            return;
         }
+        case 3 :{
+            printf("\n\nPrefeito Jonny - Estava trovejando tanto que eu so escutei o barulho dos raios.");
+            printf("\n 1- Alguem da festa possuía algo contra sua mulher?\n 2- Como voce esta?\n 3- Entendo, meus pesames...");
+            int c =0;
+            scanf("%d",&c);
+            switch(c){
+                case 1 :{
+                    printf("\n\nPrefeito Jonny – Mas e claro que nao! Jessica possuia defeitos, mas nao o suficiente para alguem assassinar ela!");
+                    return;
+                }
+                case 2:{
+                    printf("\n\nPrefeito Jonny – Estou superando ainda essa coisa toda, mas acho que vou ficar bem. Nada que uma segunda dama nao resolva, nao? he-he... (ele da uma risada sem graça)");
+                    return;
+                }
+                case 3 :
+                    printf("\n\nPrefeito Jonny – Obrigado, Detetive...");
+                    return;
+            }
         }
-        }
-        }
+    }
+}
 
 
-void policial(gameData * game)
-{
+void policial(gameData * game){
+
     char nome[50];
     strcpy(nome, game->nomePersonagem);
 
- printf("\n\n##########O policial James, um velho amigo de infancia abre a porta e lhe recebe.##########\n\n");
+    printf("\n\n##########O policial James, um velho amigo de infancia abre a porta e lhe recebe.##########\n\n");
     printf("Policial James - Vamos entre, a chuva esta muito forte, afinal de contas, o que faz aqui? Nao sabia que tambem era amigo do prefeito. ");
 
     int a = 0, b=0;
-    {    // primeira interação
+        // primeira interação
         printf(" \n\n 1 - Ola James.\n 2 - Eu recebi uma ligacao falando sobre um assassinato.\n 3 - EU?! O QUE VOCE FAZ AQUI?");
         scanf("%d",&a);
-        switch(a)
-   {
-
-   case 1:// termina em Caso 3-4 (3-3) (1-1)
-        {
-        printf("\n\n Policial James - Ola de novo, mas me conta logo, o que voce faz aqui\n?");
-        int seg =0;
-
-        printf("\n\n 1- Ah, eu fui chamado para resolver algum assassinato ou algo assim. \n 2- Eu recebi uma ligacao falando sobre um assassinato.\n 3- Eu nao vou te falar nada seu otario.");
-        scanf("%d",&seg);
-        // segunda interação se a pessoa escolher 1 no inicio
-        switch(seg)
-        {
-        case 1://1-2 (1-1)
-            {
-               printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado.");
-               printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
-               int j = 0;
-               scanf("%d",&j);
-               switch(j)
-               {
-               case 1://Caso 1-3 (1-2)
-                {
-                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansão.");
-                    return;
-                }
-               case 2 : // Caso 2-3 (1-2)
-                {
-                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao.");
-                    return;
-                }
-               case 3:
-                {
-                printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
-                printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
-                int s =0;
-                scanf("%d",&s);
-                switch(s)
-                {
-                case 1:
-                    {
-                        printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
-                        return;
-                    }
-                case 2: return;
-                case 3: return;
-
-                }
-               }
-            }
-        }
-
-
-        }
-
-
-
-}
-
-   case 2: // caso responda 2 interação Caso 2-1
-   {
-       printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado. ");
-
-        printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
-        int j = 0;
-       scanf("%d",&j);
-          switch(j)
-          {
-          case 1:
-            {
-                printf("\n\nPolicial James – Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao. ");
-                return;
-            }
-          case 2:
-           {
-           printf("\n\nPolicial James – Claro! O prefeito esta no quarto aqui atras, os outros convidados estao aí pela mansao. ");
-            return;
-          }
-          case 3:
-            {
-                printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.  ");
-                 printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
-                int s =0;
-                scanf("%d",&s);
-
-                switch(s)
-                {
-                case 1:
-                    {
-                        printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
-                        return;
-                    }
-               case 2: return;
-               case 3: return;
-            }
-          }
-
-          }}
-
-    case 3: // caso responda 3 na interação Caso 3-1
-    {
-        printf("\n\nPolicial James – Ei! O que isso cara, se acalma um pouco... ");
-        int j=0;
-        printf("\n1 - ME ACALMAR?! COM VOCE SEMPRE ROUBANDO MEUS CASOS?! EU VOU TE QUEBRAR NA PORRADA! \n2 - Perdao pelo susto, e que faz muito tempo que nao te vejo... Mas me conta, o que que aconteceu aqui? \n 3 - **Ir embora** ");
-        scanf("%d",&j);
-        switch(j)
-        {
-        case 1:
-            {
-                printf("\n\nPolicial James – Olha o jeito que voce fala comigo! Vai para parede com as maos na cabeça! ");
-                printf("\n\n##########Nisso, James saca sua arma e aponta contra voce.##########");
-                printf("\n\nPolicial James - Ja chega %s, nao e a primeira vez que voce usa de desacato para me tirar do serio! Voce vai para cadeia. ",nome);
-                printf("\n\n##########Policial James algema suas maos e o leva para viatura.##########");
-                printf("##########VOCE VAI PARA CADEIA ##########");
-                return;
-            }
-        case 2:
-            {
-                printf("Policial James – Ta ta, mas me conta logo, o que voce faz aqui? ");
-                int s =0;
-                printf("\n1- Ah, eu fui chamado para resolver algum assassinato ou algo assim.\n 2- Eu recebi uma ligacao falando sobre um assassinato.\n 3- Eu nao vou te falar nada seu otario.");
-                scanf("%d",&s);
-                switch(s)
-                {
-                case 1:
-                    {
-                        printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado.");
-                         printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
-               int j = 0;
-               scanf("%d",&j);
-               switch(j)
-               {
-               case 1:
-                {
-                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansão.");
-                    return;
-                }
-
-               case 2:
-                {
-                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao.");
-                    return;
-                }
-
-               case 3:
-                {
-                    printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
-                    printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
-                int ta =0;
-                scanf("%d",&ta);
-
-                switch(ta)
-                {
-                case 1:
-                    {
-                        printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
-                        return;
-                    }
-                case 2: return;
-                case 3: return;
-
+    switch(a){
+        case 1:{// termina em Caso 3-4 (3-3) (1-1)
+            printf("\n\n Policial James - Ola de novo, mas me conta logo, o que voce faz aqui\n?");
+            int seg =0;
+            printf("\n\n 1- Ah, eu fui chamado para resolver algum assassinato ou algo assim. \n 2- Eu recebi uma ligacao falando sobre um assassinato.\n 3- Eu nao vou te falar nada seu otario.");
+            scanf("%d",&seg);
+            // segunda interação se a pessoa escolher 1 no inicio
+            switch(seg){
+                case 1:{//1-2 (1-1)
+                    printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado.");
+                    printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
+                    int j = 0;
+                    scanf("%d",&j);
+                    switch(j){
+                        case 1:{//Caso 1-3 (1-2)
+                            printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansão.");
+                            return;
+                        }
+                        case 2 :{ // Caso 2-3 (1-2)
+                            printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao.");
+                            return;
+                        }
+                        case 3:{
+                            printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
+                            printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
+                            int s =0;
+                            scanf("%d",&s);
+                            switch(s){
+                                case 1:{
+                                    printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
+                                    return;
+                                }
+                                case 2: return;
+                                case 3: return;
+                            }
+                        }
                     }
                 }
             }
-        }
-                case 2:
-                    {
-                      printf("\n\nPolicial James – A primeira dama foi assassinada aqui hoje durante a festa que o prefeito tava dando, mas sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
 
-                    printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
-                    printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
-                int s =0;
-                scanf("%d",&s);
 
-                switch(s)
-                {
-                case 1:
-                    {
-                        printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
-                        return;
-                    }
-                case 2: return;
-                case 3: return;
 
-                    }
     }
-                case 3:
-                    {
-                      printf("\n\nPolicial James – Olha o jeito que voce fala comigo! Vai para parede com as maos na cabeça! ");
-                printf("\n\n##########Nisso, James saca sua arma e aponta contra voce.##########");
-                printf("\n\nPolicial James - Ja chega %s, nao e a primeira vez que voce usa de desacato para me tirar do serio! Voce vai para cadeia. ",nome);
-                printf("\n\n##########Policial James algema suas maos e o leva para viatura.##########");
-                printf("##########VOCE VAI PARA CADEIA ##########");
-                return;
+        case 2:{ // caso responda 2 interação Caso 2-1
+            printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado. ");
+            printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
+            int j = 0;
+            scanf("%d",&j);
+            switch(j){
+                case 1:{
+                    printf("\n\nPolicial James – Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao. ");
+                    return;
+                }
+                case 2:{
+                    printf("\n\nPolicial James – Claro! O prefeito esta no quarto aqui atras, os outros convidados estao aí pela mansao. ");
+                    return;
+                }
+                case 3:{
+                    printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.  ");
+                    printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
+                    int s =0;
+                    scanf("%d",&s);
+                    switch(s){
+                        case 1:{
+                            printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
+                            return;
+                        }
+                        case 2: return;
+                        case 3: return;
                     }
-
-                }}
-        case 3:
-            {
-                printf("Voce chocado em rever seu velho “conhecido” de infancia, se vira e vai em direção ao seu carro, ignorando a chuva, voce abre a porta do seu carro, entra, liga o motor e vai para casa descançar.");
-                return;
+                }
             }
-
-
-
-
-
-
-
+        }
+        case 3:{ // caso responda 3 na interação Caso 3-1
+            printf("\n\nPolicial James – Ei! O que isso cara, se acalma um pouco... ");
+            int j=0;
+            printf("\n1 - ME ACALMAR?! COM VOCE SEMPRE ROUBANDO MEUS CASOS?! EU VOU TE QUEBRAR NA PORRADA! \n2 - Perdao pelo susto, e que faz muito tempo que nao te vejo... Mas me conta, o que que aconteceu aqui? \n 3 - **Ir embora** ");
+            scanf("%d",&j);
+            switch(j){
+                case 1:{
+                    printf("\n\nPolicial James – Olha o jeito que voce fala comigo! Vai para parede com as maos na cabeça! ");
+                    printf("\n\n##########Nisso, James saca sua arma e aponta contra voce.##########");
+                    printf("\n\nPolicial James - Ja chega %s, nao e a primeira vez que voce usa de desacato para me tirar do serio! Voce vai para cadeia. ",nome);
+                    printf("\n\n##########Policial James algema suas maos e o leva para viatura.##########");
+                    printf("##########VOCE VAI PARA CADEIA ##########");
+                    return;
+                }
+                case 2:{
+                    printf("Policial James – Ta ta, mas me conta logo, o que voce faz aqui? ");
+                    int s =0;
+                    printf("\n1- Ah, eu fui chamado para resolver algum assassinato ou algo assim.\n 2- Eu recebi uma ligacao falando sobre um assassinato.\n 3- Eu nao vou te falar nada seu otario.");
+                    scanf("%d",&s);
+                    switch(s){
+                        case 1:{
+                            printf("\n\nPolicial James - Ah sim, entao tambem te chamaram, e o seguinte, o prefeito resolveu dar uma festa aqui hoje, mas nao acabou muito bem. Na verdade, a mulher dele esta morta la no banheiro, e pra piorar ninguem viu quem foi por causa das luzes terem se apagado.");
+                            printf("\n\n1- Entendo, os convidados ainda estao ai dentro ai? \n2- Um assassinato as cegas, hmmm. O prefeito esta ai? \n3- Compreendo... Algum suspeito?");
+                            int j = 0;
+                            scanf("%d",&j);
+                            switch(j){
+                                case 1:{
+                                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansão.");
+                                    return;
+                                }
+                                case 2:{
+                                    printf("\n\nPolicial James - Claro! O prefeito esta no quarto aqui atras, os outros convidados estao ai pela mansao.");
+                                    return;
+                                }
+                                case 3:{
+                                    printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
+                                    printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
+                                    int ta =0;
+                                    scanf("%d",&ta);
+                                    switch(ta){
+                                        case 1:{
+                                                printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
+                                                return;
+                                        }
+                                        case 2: return;
+                                        case 3: return;
+                                    }
+                                }
+                            }
+                        }
+                        case 2:{
+                            printf("\n\nPolicial James – A primeira dama foi assassinada aqui hoje durante a festa que o prefeito tava dando, mas sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
+                            printf("\n\nPolicial James – Algum? Sinceramente, boa sorte em descobrir quem foi o culpado, ela tinha muitos... Bem... “Inimigos” assim digamos.");
+                            printf("\n\n1- Inimigos? \n 2- Entendi, vou entrar e procurar o prefeito para interroga-lo. \n 3- Inimigos e? Vou averiguar a cena do crime");
+                            int s =0;
+                            scanf("%d",&s);
+                            switch(s){
+                                case 1:{
+                                    printf("\n\nPolicial James - E, inimigos, que Deus o tenha, mas para falar a verdade, ela era insuportavel, sempre se achando melhor que tudo e todos, digamos que era uma pessoa dificil de conviver...");
+                                    return;
+                                }
+                            case 2: return;
+                            case 3: return;
+                            }
+                        }
+                        case 3:{
+                            printf("\n\nPolicial James – Olha o jeito que voce fala comigo! Vai para parede com as maos na cabeça! ");
+                            printf("\n\n##########Nisso, James saca sua arma e aponta contra voce.##########");
+                            printf("\n\nPolicial James - Ja chega %s, nao e a primeira vez que voce usa de desacato para me tirar do serio! Voce vai para cadeia. ",nome);
+                            printf("\n\n##########Policial James algema suas maos e o leva para viatura.##########");
+                            printf("##########VOCE VAI PARA CADEIA ##########");
+                            return;
+                        }
+                    }
+                }
+                case 3:{
+                    printf("Voce chocado em rever seu velho “conhecido” de infancia, se vira e vai em direção ao seu carro, ignorando a chuva, voce abre a porta do seu carro, entra, liga o motor e vai para casa descançar.");
+                    return;
+                }
+            }
+        }
+    }
 }
-}
-   }}}
 
 
 void corpo(gameData * game)
 {
     char nome[50];
     strcpy(nome, game->nomePersonagem);
-    printf("\n\nVoce para e observa o corpo, com uma leitura fria da situacao, voce nao ve marcas de luta, do lado do corpo ha uma municao de 9mm (tipo de arma) no chao e ve que a o vestido esta cheio de sangue, provavelmente o ferimento provavelmente esta na barriga dela, mas para nao interferir nas provas ate a chegada do perito criminal voce nao abre o vestido.\n\n");
+    printf("\n\nVoce para e observa o corpo, com uma leitura fria da situacao, voce nao ve marcas de luta, do lado do corpo ha uma munição de 9mm (tipo de arma) no chao e ve que a o vestido esta cheio de sangue, provavelmente o ferimento provavelmente esta na barriga dela, mas para nao interferir nas provas ate a chegada do perito criminal voce nao abre o vestido.\n\n");
     return;
 }
 
@@ -624,7 +555,7 @@ void mordomo (gameData * game)
 {
     char nome[50];
     strcpy(nome, game->nomePersonagem);
-    printf("\n\nMordomo Donald - Senhor detetive, que noite tragica nao? Posso ajudar sua investigacao respondendo algumas perguntas?");
+    printf("\n\nMordomo Donald – Senhor detetive, que noite tragica nao? Posso ajudar sua investigacao respondendo algumas perguntas?");
     printf("\n\n 1- Quais tipos de bebidas voce serviu hoje na festa?  \n 2- Quem foi a pessoa que estava mais proxima da primeira dama quando a luz se apagou? \n 3- Onde voce estava quando acabou a energia?");
     int a =0;
     scanf("%d",&a);
@@ -632,7 +563,7 @@ void mordomo (gameData * game)
     {
     case 1 :
         {
-            printf("\n\nMordomo Donald - Hoje foi servido apenas champagne e refrigerante.");
+            printf("\n\nMordomo Donald – Hoje foi servido apenas champagne e refrigerante.");
             printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
             int s =0;
             scanf("%d",&s);
@@ -641,23 +572,23 @@ void mordomo (gameData * game)
             {
             case 1:
                 {
-                    printf("\nMordomo Donald - Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
+                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
                     return;
                 }
             case 2:
                 {
-                    printf("\nMordomo Donald - A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
+                    printf("\nMordomo Donald – A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
                     return;
                 }
             case 3:
-                    {printf("\nMordomo Donald - Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
+                    {printf("\nMordomo Donald – Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
                     return;
             }}
 
         }
     case 2:
      {
-         printf("\n\nMordomo Donald - Creio que alguns minutos antes da luz se apagar o policial James estava conversando com a primeira dama.");
+         printf("\n\nMordomo Donald – Creio que alguns minutos antes da luz se apagar o policial James estava conversando com a primeira dama.");
          printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
             int s =0;
             scanf("%d",&s);
@@ -666,25 +597,25 @@ void mordomo (gameData * game)
             {
             case 1:
                 {
-                    printf("\nMordomo Donald - Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
+                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
                     return;
                 }
             case 2:
                 {
-                    printf("\nMordomo Donald - A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
+                    printf("\nMordomo Donald – A ultima pessoa que saiu do banheiro foi o professor Samuel, quando a luz voltou, ele saiu de la anunciando que havia encontrado um corpo.");
                     return;
                 }
             case 3:
                 {
 
-                    printf("\nMordomo Donald - Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
+                    printf("\nMordomo Donald – Era uma mulher complicada de se lidar, mas de umas semanas pra ca ela havia começado a agir estranho, estava\nsempre um pouco cansada, comia pouco e sempre estava acordada, raramente eu a via dormindo.");
                     return;
             }
 
         }}
     case 3:
      {
-         printf("\n\nMordomo Donald - Eu estava no corredor entre o quarto e o salao, mas lembro que alguem estava nas escadas atras de mim.");
+         printf("\n\nMordomo Donald – Eu estava no corredor entre o quarto e o salao, mas lembro que alguem estava nas escadas atras de mim.");
          printf("\n 1- Voce escutou alguma coisa? \n2- Voce viu alguem saindo do banheiro? \n3- Como voce descreveria a primeira dama? ");
             int s =0;
             scanf("%d",&s);
@@ -693,7 +624,7 @@ void mordomo (gameData * game)
             {
             case 1:
                 {
-                    printf("\nMordomo Donald - Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
+                    printf("\nMordomo Donald – Talvez eu esteja enganado, mas me recordo de escutar um barulho muito alto, como um tiro ou algo do tipo.");
                     return;
                 }
             case 2:

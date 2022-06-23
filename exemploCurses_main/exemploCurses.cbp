@@ -47,6 +47,9 @@
 		<Unit filename="APSLib/conversas.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="APSLib/conversasFilhoEMordomo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="APSLib/gameFuncs.c">
 			<Option compilerVar="CC" />
 		</Unit>

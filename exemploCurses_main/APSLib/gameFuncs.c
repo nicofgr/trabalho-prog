@@ -77,7 +77,7 @@ void initGame(gameData * game){
     game->interacaoDisponivel = 0;
     game->interagir = 0;
 
-    game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
+    game->menuInicial = TRUE; ///MUDAR AQUI PARA TESTE
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game);
@@ -114,6 +114,10 @@ void handleInputs(gameData * game){
         case 'e':
             if(game->interacaoDisponivel)
                 game->interagir = 1;
+            break;
+        case 'f':
+            if(game->interacaoDisponivel == 4)
+                Dialogo(game->ultimaTecla, &game->interagir, 6, game);
             break;
         case 'q':
             break;

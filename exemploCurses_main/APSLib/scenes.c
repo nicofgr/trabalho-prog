@@ -101,8 +101,13 @@ void Overworld(gameData * game){
     }
 
     setColor(COLOR_WHITE, COLOR_BLACK, A_STANDOUT);
-    if(game->interacaoDisponivel && !(game->interagir))
+    if(game->interacaoDisponivel && !(game->interagir)){
         mvprintw(game->meioTela.y + 10, 0, " > Interacao disponivel, pressione 'e' para interagir");
+        if(game->interacaoDisponivel == 4){
+                setColor(COLOR_RED, COLOR_WHITE, A_STANDOUT);
+                mvprintw(game->meioTela.y + 11, 0, " > Pressione F para denunciar o suspeito");
+        }
+    }
 
 
     // Exibe o conteúdo na tela (stdscr), getch() também ativa um refresh
