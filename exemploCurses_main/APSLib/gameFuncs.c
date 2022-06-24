@@ -77,7 +77,7 @@ void initGame(gameData * game){
     game->interacaoDisponivel = 0;
     game->interagir = 0;
 
-    game->menuInicial = TRUE; ///MUDAR AQUI PARA TESTE
+    game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game);
