@@ -2,26 +2,35 @@
 
 void MainMenu(gameData * game){
 
+    int os = 38;
+
+    setColor(COLOR_GREEN, COLOR_BLACK, 0);
+    mvprintw(7,game->meioTela.x - os, "   8888888                                             d8b 888             ");
+    mvprintw(8,game->meioTela.x - os, "     888                                               Y8P 888             ");
+    mvprintw(9,game->meioTela.x - os, "     888                                                   888             ");
+    mvprintw(10,game->meioTela.x - os, "     888   88888b.   .d8888b .d88b.   .d88b.  88888b.  888 888888  8888b.  ");
+    mvprintw(11,game->meioTela.x - os, "     888   888 \"88b d88P\"   d88\"\"88b d88P\"88b 888 \"88b 888 888        \"88b ");
+    mvprintw(12,game->meioTela.x - os, "     888   888  888 888     888  888 888  888 888  888 888 888    .d888888 ");
+    mvprintw(13,game->meioTela.x - os, "     888   888  888 Y88b.   Y88..88P Y88b 888 888  888 888 Y88b.  888  888 ");
+    mvprintw(14,game->meioTela.x - os, "   8888888 888  888  \"Y8888P \"Y88P\"   \"Y88888 888  888 888  \"Y888 \"Y888888 ");
+    mvprintw(15,game->meioTela.x - os, "                                          888                              ");
+    mvprintw(16,game->meioTela.x - os, "                                     Y8b d88P                              ");
+    mvprintw(17,game->meioTela.x - os, "                                      \"Y88P\"                               ");
+
     switch(game->telaMenuInicial){
         case 0: ///TELA INICIAL
             initScreen(GAME);
             setColor(COLOR_GREEN, COLOR_BLACK, 0);
             printw("\n\n\n\n\n\n\n\n\n");
-            printw("                                  _____ _ _         _          ___              _          \n");
-            printw("                                 |_   _(_) |       | |        / _ \\            (_)        \n");
-            printw("                                   | |  _| |_ _   _| | ___   / /_\\ \\ __ _ _   _ _        \n");
-            printw("                                   | | | | __| | | | |/ _ \\  |  _  |/ _` | | | | |        \n");
-            printw("                                   | | | | |_| |_| | | (_) | | | | | (_| | |_| | |         \n");
-            printw("                                   \\_/ |_|\\__|\\__,_|_|\\___/  \\_| |_/\\__, |\\__,_|_|  \n");
-            printw("                                                                       | |                 \n");
-            printw("                                                                       |_|                 \n");
-            printw("                                             Pressione ENTER para continuar.");
+
+
+            mvprintw(20,game->meioTela.x - 15,"Pressione ENTER para continuar.");
 
             break;
         case 1: ///TELA 2
             initScreen(MENU);
             setColor(COLOR_GREEN, COLOR_BLACK, 0);
-            mvprintw(game->meioTela.y, game->meioTela.x - 30, "Digite o nome do seu personagem: ");
+            mvprintw(20, game->meioTela.x - 25, "Digite o nome do seu personagem: ");
             getstr(game->nomePersonagem);
             game->telaMenuInicial = 3;
             break;
