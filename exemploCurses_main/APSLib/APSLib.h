@@ -8,14 +8,15 @@
 // 8 colors for standard Curses
 #define PALLETE_SIZE (COLOR_WHITE - COLOR_BLACK + 1)
 
-enum screenMode{
-    MENU,
-    GAME
-};
-
 // Estrutura com estado interno da aplicação
 typedef struct gameData
 {
+    enum screen{
+        MENU,
+        OVERWORLD,
+        DIALOGUE
+    }currentScreen;
+
     ///MENU INICIAL
     bool menuInicial; //Menu inicial ligado ou desligado
     int telaMenuInicial; //Pagina do menu inicial
@@ -50,7 +51,7 @@ void setColor(short int fg, short int bg, chtype attr);
 void initGame(gameData * game);
 void handleInputs(gameData * game);
 void doUpdate(gameData * game);
-void drawScreen(gameData * game, enum screenMode);
+void drawScreen(gameData * game);
 
 ///DATA
 void SalvaDados(gameData * game);
@@ -78,5 +79,8 @@ void policial_2 (gameData * game);
 void professor(gameData * game);
 void filho(gameData * game);
 void mordomo(gameData * game);
+
+///TESTE
+void policialTeste(gameData * game);
 
 #endif // APSLIB_H_INCLUDED

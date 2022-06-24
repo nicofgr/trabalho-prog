@@ -17,9 +17,18 @@ void MainMenu(gameData * game){
     mvprintw(16,game->meioTela.x - os, "                                     Y8b d88P                              ");
     mvprintw(17,game->meioTela.x - os, "                                      \"Y88P\"                               ");
 
+    ///BORDAS
+    for(int lin = 0; lin < (game->meioTela.y*2); lin++){
+        for(int col = 0; col < (game->meioTela.x*2); col++){
+            if(lin == 0 || col == 0 || lin == (game->meioTela.y*2)-1 || col == (game->meioTela.x*2)-1){
+                setColor(COLOR_BLACK, COLOR_GREEN, 0);
+                mvaddch(lin, col, ACS_BOARD);
+            }
+        }
+    }
+
     switch(game->telaMenuInicial){
         case 0: ///TELA INICIAL
-            initScreen(GAME);
             setColor(COLOR_GREEN, COLOR_BLACK, 0);
             printw("\n\n\n\n\n\n\n\n\n");
 
@@ -28,15 +37,15 @@ void MainMenu(gameData * game){
 
             break;
         case 1: ///TELA 2
-            initScreen(MENU);
+            echo();
             setColor(COLOR_GREEN, COLOR_BLACK, 0);
             mvprintw(20, game->meioTela.x - 25, "Digite o nome do seu personagem: ");
             getstr(game->nomePersonagem);
             game->telaMenuInicial = 3;
+            noecho();
             break;
         case 3: ///PROLOGO
             clear();
-            initScreen(MENU);
             curs_set(0);
             setColor(COLOR_GREEN, COLOR_BLACK, 0);
             mvprintw(4,game->meioTela.x - 30, "Era uma noite escura e chuvosa, relampejava sem parar,");
@@ -56,21 +65,12 @@ void MainMenu(gameData * game){
             mvprintw(22,game->meioTela.x - 30, "Quando a porta se abre voce eh surpreendido.");
             char str[5];
             getstr(str);
-            game->menuInicial = FALSE;
-            initScreen(GAME);
+            game->currentScreen = OVERWORLD;
             break;
 
     }
 
-    ///BORDAS
-    for(int lin = 0; lin < (game->meioTela.y*2); lin++){
-        for(int col = 0; col < (game->meioTela.x*2); col++){
-            if(lin == 0 || col == 0 || lin == (game->meioTela.y*2)-1 || col == (game->meioTela.x*2)-1){
-                setColor(COLOR_BLACK, COLOR_GREEN, 0);
-                mvaddch(lin, col, ACS_BOARD);
-            }
-        }
-    }
+
 
     ///Meio da tela
     //mvaddch(game->meioTela.y, game->meioTela.x, 'x');
@@ -108,7 +108,8 @@ void Overworld(gameData * game){
 
     //INTERACAO
     if(game->interagir && game->interacaoDisponivel){
-        Dialogo(game->ultimaTecla, &game->interagir, game->interacaoDisponivel, game);
+        game->currentScreen = DIALOGUE;
+        //Dialogo(game->ultimaTecla, &game->interagir, game->interacaoDisponivel, game);
     }else{
         game->interagir = 0;
     }
@@ -124,5 +125,16 @@ void Overworld(gameData * game){
 
 
     // Exibe o conteúdo na tela (stdscr), getch() também ativa um refresh
+
+}
+
+void DialogueScreen(gameData * game){
+
+    initscr();
+    printw("Hello World !!!");
+	refresh();
+	getch();
+	game->currentScreen = OVERWORLD;
+	endwin();
 
 }

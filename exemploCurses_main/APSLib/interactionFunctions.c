@@ -36,7 +36,8 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
             professor(game);
             break;
         case 4:
-            policial(game);
+            //policial(game);
+            policialTeste(game);
             break;
         case 5:
             corpo(game);

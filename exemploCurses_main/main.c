@@ -7,7 +7,7 @@ int main(int argc, char *argv[]){
 
     gameData game;  // estrutura com dados internos da aplicação
 
-    initScreen(GAME); // inicializa a tela pelo Curses e o estado inicial da aplicação
+    initScreen(); // inicializa a tela pelo Curses e o estado inicial da aplicação
     initGame(&game);
 
 	while(1){ // Laço principal sem retorno, pode ser removido para exibição direta de informação na tela
@@ -16,11 +16,7 @@ int main(int argc, char *argv[]){
 
         doUpdate(&game); // Gerencia lógica da aplicação
 
-        if(game.menuInicial){
-            drawScreen(&game, MENU); // Atualiza a tela
-        }else{
-            drawScreen(&game, GAME);
-        }
+        drawScreen(&game); // Atualiza a tela
 
         napms(10); // Controla o FPS da aplicação
     }

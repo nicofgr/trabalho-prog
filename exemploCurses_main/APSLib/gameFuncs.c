@@ -8,8 +8,7 @@ void initScreen(screenMode){
     initscr();
 #endif
 
-    if (has_colors())
-    {
+    if (has_colors()){
         int bg = 0, fg = 0;
 
         start_color();
@@ -19,28 +18,16 @@ void initScreen(screenMode){
                 init_pair(bg*PALLETE_SIZE + fg + 1, fg, bg); // color 0 is system default (reserved)
     }
 
-    switch(screenMode){
-        case MENU:
-            echo();
-            curs_set(1);
-            nodelay(stdscr, FALSE);
-            timeout(0);
-            break;
-
-        case GAME:
-            // Trata a tecla Enter como \n
-            //nl();
-            // Teclas digitadas pelo usuário não aparecem na tela
-            noecho();
-            // 0 para cursor invisível
-            curs_set(0);
-            // Define getch como non-blocking de acordo com o timeout abaixo
-            nodelay(stdscr, TRUE);
-            // Timeout em 0 determina getch como non-blocking, não espera entrada do usuário
-            timeout(0);
-            break;
-    }
-
+    // Trata a tecla Enter como \n
+    //nl();
+    // Teclas digitadas pelo usuário não aparecem na tela
+    noecho();
+    // 0 para cursor invisível
+    curs_set(0);
+    // Define getch como non-blocking de acordo com o timeout abaixo
+    nodelay(stdscr, TRUE);
+    // Timeout em 0 determina getch como non-blocking, não espera entrada do usuário
+    timeout(0);
     // Habilita teclas de function (F1, F2, ...), flechas, etc
     keypad(stdscr, TRUE);
 }
@@ -77,7 +64,8 @@ void initGame(gameData * game){
     game->interacaoDisponivel = 0;
     game->interagir = 0;
 
-    game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
+    game->menuInicial = TRUE; ///MUDAR AQUI PARA TESTE
+    game->currentScreen = MENU;
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game);
@@ -174,16 +162,19 @@ void doUpdate(gameData * game){
     game->interacaoDisponivel = DetectaInteracoes(game->interactionMap, game->posJogador.x, game->posJogador.y);
 }
 
-void drawScreen(gameData * game, enum screenMode screenMode){
+void drawScreen(gameData * game){
 
     clear();
 
-    switch(screenMode){
+    switch(game->currentScreen){
         case MENU:
             MainMenu(game);
             break;
-        case GAME:
+        case OVERWORLD:
             Overworld(game);
+            break;
+        case DIALOGUE:
+            DialogueScreen(game);
             break;
     }
 

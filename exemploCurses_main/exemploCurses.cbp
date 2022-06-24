@@ -44,6 +44,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="APSLib/APSLib.h" />
+		<Unit filename="APSLib/Dialogos/policial.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="APSLib/conversas.c">
 			<Option compilerVar="CC" />
 		</Unit>
