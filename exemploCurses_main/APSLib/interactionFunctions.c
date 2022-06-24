@@ -22,6 +22,7 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
 
     endwin();
     system("cls");
+    fflush(stdin);
 
     switch(npcNum){
         case 1:
@@ -47,8 +48,10 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
             break;
     }
 
-    printf("\n");
+
+    printf("\n\n");
     system("pause");
+    system("cls");
     game->interagir = 0;
 
 }
