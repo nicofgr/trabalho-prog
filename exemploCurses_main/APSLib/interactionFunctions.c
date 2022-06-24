@@ -23,6 +23,7 @@ void Dialogo(int ultimaTecla, int *interagir, int npcNum, gameData * game){
     endwin();
     system("cls");
     fflush(stdin);
+    setlocale(LC_ALL, "Portuguese");
 
     switch(npcNum){
         case 1:

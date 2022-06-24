@@ -921,11 +921,12 @@
 	<wchar.h>
 	<stdbool.h>
 
-1656030350 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
+1656095132 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
 	<curses.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
+	<locale.h>
 
 1655995475 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\main.c
 	<stdlib.h>
@@ -1132,7 +1133,7 @@
 1656031126 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
 	"APSLib.h"
 
-1656019721 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
+1656095152 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
 	"APSLib.h"
 
 1656092820 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c

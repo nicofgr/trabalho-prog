@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <locale.h>
 // 8 colors for standard Curses
 #define PALLETE_SIZE (COLOR_WHITE - COLOR_BLACK + 1)
 

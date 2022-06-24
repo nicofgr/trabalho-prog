@@ -87,7 +87,7 @@ void policial(gameData * game){
     strcpy(nome, game->nomePersonagem);
 
     printf("\n\n##########O policial James, um velho amigo de infancia abre a porta e lhe recebe.##########\n\n");
-    printf("Policial James - Vamos entre, a chuva esta muito forte, afinal de contas, o que faz aqui? Nao sabia que tambem era amigo do prefeito. ");
+    printf("Policial James - Vamos entre, a chuva esta muito forte, afinal de contas, o que faz aqui? Não sabia que também era amigo do prefeito. ");
     // primeira interação
     printf(" \n\n 1 - Ola James.\n 2 - Eu recebi uma ligacao falando sobre um assassinato.\n 3 - EU?! O QUE VOCE FAZ AQUI?");
 
