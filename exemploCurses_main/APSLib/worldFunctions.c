@@ -11,6 +11,32 @@ void LeMundo(char* nomeArquivo, gameData * game){
         }
     }
 
+    //Mede quantas linhas o arquivo tem:
+    int qtdLin;
+    for(qtdLin = 0; fgets(game->mapa[qtdLin], 100, arquivo); qtdLin++){};
+    //printf("Quantidade de linhas: %d\n", qtdLin);
+
+    //Aloca o numero de linhas (ponteiros de char) necessario
+    char** arr = (char**)malloc(qtdLin * sizeof(char*));
+
+    fseek(arquivo, 0, SEEK_SET);
+
+    //Mede quantos caracteres cada linha tem
+    for(int lin = 0; fgets(game->mapa[lin], 100, arquivo); lin++){
+        int nChar = strlen(game->mapa[lin]) + 1;
+        //printf("A linha %d tem %d caracteres\n", lin + 1, nChar);
+        //Alocar o numero de caracterers da linha i necessarios (ponteiro i)
+        arr[lin] = (char*)malloc(nChar * sizeof(char));
+        //Copiar os valores no vetor
+        strcpy(arr[lin], game->mapa[lin]);
+    };
+
+    game->nMaxLin = qtdLin;
+
+    game->gameMap = arr;
+
+    fseek(arquivo, 0, SEEK_SET);
+
     ///COPIA O MAPA DO ARQUIVO NO VETOR
     for(int lin = 0; fgets(game->mapa[lin], 100, arquivo); lin++){}; //fgets vai retornar null no final do arquivo
 
@@ -46,7 +72,7 @@ void LeMundo(char* nomeArquivo, gameData * game){
     }
 }
 
-void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY, char mapa[100][100]){
+void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJogX, const int posJogY, char mapa[100][100], gameData * game){
 
     ///VERIFICA EM QUE QUARTO O JOGADOR ESTA
     enum quartos{
@@ -79,27 +105,27 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
     switch(quartoAtual){
         case CORREDOR:
             //printw("Corredor\n");
-            DesenhaSala(10, 0, 14, 9, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(10, 0, 14, 9, telaOffsetX, telaOffsetY, game);
             break;
         case ENTRADA:
             //printw("Entrada\n");
-            DesenhaSala(0, 0, 10, 4, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(0, 0, 10, 4, telaOffsetX, telaOffsetY, game);
             break;
         case BANHEIRO:
             //printw("Banheiro\n");
-            DesenhaSala(14, 0, 26, 3, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(14, 0, 26, 3, telaOffsetX, telaOffsetY, game);
             break;
         case SALAO:
             //printw("Salao de festas\n");
-            DesenhaSala(14, 3, 26, 9, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(14, 3, 26, 9, telaOffsetX, telaOffsetY, game);
             break;
         case QUARTO:
             //printw("Quarto\n");
-            DesenhaSala(0, 4, 10, 9, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(0, 4, 10, 9, telaOffsetX, telaOffsetY, game);
             break;
         case QUARTOFILHO:
             //printw("QuartoFilho\n");
-            DesenhaSala(8, 10, 16, 14, mapa, telaOffsetX, telaOffsetY);
+            DesenhaSala(8, 10, 16, 14, telaOffsetX, telaOffsetY, game);
             break;
         case FORA:
             //printw("Fora\n");
@@ -113,16 +139,15 @@ void DesenhaMundo(const int telaOffsetX, const int telaOffsetY, const int posJog
             }
             break;
     }
-
 }
 
-void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], int telaOffsetX, int telaOffsetY){
+void DesenhaSala(int xMin, int yMin, int xMax, int yMax, int telaOffsetX, int telaOffsetY, gameData * game){
 
     ///SALAS NO FUNDO
-    for(int lin = 0; lin <= 50; lin++){     //LINHA
-        for(int col = 0; col <= 50; col++){ //COLUNA
+    for(int lin = 0; lin < game->nMaxLin; lin++){     //LINHA
+        for(int col = 0; game->gameMap[lin][col] != '\0'; col++){ //COLUNA
 
-            if(mapa[lin][col] == 'x'){
+            if(game->gameMap[lin][col] == 'x'){
                 setColor(COLOR_WHITE, COLOR_BLACK, A_DIM);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BOARD);
             }
@@ -133,37 +158,37 @@ void DesenhaSala(int xMin, int yMin, int xMax, int yMax, char mapa[100][100], in
     for(int lin = yMin; lin <= yMax; lin++){     //LINHA
         for(int col = xMin; col <= xMax; col++){ //COLUNA
 
-            if(mapa[lin][col] == 'x'){
+            if(game->mapa[lin][col] == 'x'){
                 setColor(COLOR_WHITE, COLOR_BLACK, A_DIM);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
             }
 
-            if(mapa[lin][col] == 'o'){
+            if(game->mapa[lin][col] == 'o'){
                 setColor(COLOR_WHITE, COLOR_BLACK, A_DIM);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_BLOCK);
             }
 
-            if(mapa[lin][col] == '1'){ //PREFEITO
+            if(game->mapa[lin][col] == '1'){ //PREFEITO
                 setColor(COLOR_GREEN, COLOR_BLACK, 0);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
-            if(mapa[lin][col] == '2'){ //EMPREGADO
+            if(game->mapa[lin][col] == '2'){ //EMPREGADO
                 setColor(COLOR_YELLOW, COLOR_BLACK, 0);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
-            if(mapa[lin][col] == '3'){ //PROFESSOR
+            if(game->mapa[lin][col] == '3'){ //PROFESSOR
                 setColor(COLOR_RED, COLOR_BLACK, A_BOLD);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
-            if(mapa[lin][col] == '4'){ //POLICIAL
+            if(game->mapa[lin][col] == '4'){ //POLICIAL
                 setColor(COLOR_BLUE, COLOR_BLACK, A_BOLD);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
-            if(mapa[lin][col] == '5'){ //CORPO
+            if(game->mapa[lin][col] == '5'){ //CORPO
                 setColor(COLOR_WHITE, COLOR_RED, 0);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }
-            if(mapa[lin][col] == '7'){ //FILHO PREFEITO
+            if(game->mapa[lin][col] == '7'){ //FILHO PREFEITO
                 setColor(COLOR_MAGENTA, COLOR_BLACK, A_BOLD);
                 mvaddch(lin + telaOffsetY, col + telaOffsetX, ACS_DIAMOND);
             }

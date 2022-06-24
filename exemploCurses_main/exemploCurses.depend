@@ -921,7 +921,7 @@
 	<wchar.h>
 	<stdbool.h>
 
-1656024503 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
+1656030350 c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\apslib.h
 	<curses.h>
 	<stdlib.h>
 	<time.h>
@@ -1129,16 +1129,16 @@
 1642209066 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\pdcurses\wincon\pdcutil.c
 	"pdcwin.h"
 
-1656013736 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
+1656031126 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\worldfunctions.c
 	"APSLib.h"
 
 1656019721 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\interactionfunctions.c
 	"APSLib.h"
 
-1656025180 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
+1656030078 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\gamefuncs.c
 	"APSLib.h"
 
-1656025341 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\scenes.c
+1656030159 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\scenes.c
 	"APSLib.h"
 
 1655993806 source:c:\users\usuario\documents\github\trabalho-prog\exemplocurses_main\apslib\screenmodes.c

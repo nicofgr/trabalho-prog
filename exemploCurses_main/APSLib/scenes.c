@@ -95,7 +95,7 @@ void Overworld(gameData * game){
     mvaddch(game->meioTela.y, game->meioTela.x, ACS_DIAMOND);
 
     //DESENHA MUNDO
-    DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y, game->mapa);
+    DesenhaMundo(game->posMapa.x, game->posMapa.y, game->posJogador.x, game->posJogador.y, game->mapa, game);
 
     //INTERACAO
     if(game->interagir && game->interacaoDisponivel){

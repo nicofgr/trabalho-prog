@@ -77,7 +77,7 @@ void initGame(gameData * game){
     game->interacaoDisponivel = 0;
     game->interagir = 0;
 
-    game->menuInicial = TRUE; ///MUDAR AQUI PARA TESTE
+    game->menuInicial = FALSE; ///MUDAR AQUI PARA TESTE
     game->telaMenuInicial = 0;
     game->devMode = FALSE;
     LeMundo("Salas\\sala1.txt", game);
@@ -123,6 +123,9 @@ void handleInputs(gameData * game){
             SalvaDados(game);
             break;
         case 'Q':
+            for (int i = 0; i < game->nMaxLin - 1; i++)
+                free(game->gameMap[i]);
+            free(game->gameMap);
             curs_set(1);
             endwin();
             exit(EXIT_SUCCESS);

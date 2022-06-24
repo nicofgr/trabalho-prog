@@ -50,6 +50,9 @@
 		<Unit filename="APSLib/conversasFilhoEMordomo.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="APSLib/dataManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="APSLib/gameFuncs.c">
 			<Option compilerVar="CC" />
 		</Unit>
